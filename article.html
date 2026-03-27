@@ -32,7 +32,7 @@
     nav a { text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--ink-mid); font-weight: 400; transition: color 0.2s; }
     nav a:hover { color: var(--ink); }
 
-    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; }
     .article-header { margin-bottom: 3rem; animation: fadeUp 0.6s ease both; position: relative; z-index: 1; }
     .article-category { display: inline-block; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--ink-light); text-transform: uppercase; border-bottom: 2px solid #00aacc; padding-bottom: 0.2rem; margin-bottom: 1.5rem; font-weight: 400; }
     .article-work-title { font-family: var(--serif); font-size: clamp(1.0rem, 2.5vw, 1.3rem); font-weight: 400; line-height: 1.5; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 0.4rem; }
@@ -70,7 +70,7 @@
     .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
     .pull-quote p { font-family: var(--sans); font-style: italic; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
 
-    .article-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+    .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
     .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
     .tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.2s; }
     .tag:hover { background: var(--warm); border-color: var(--ink-mid); }
@@ -82,8 +82,8 @@
     .nav-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; }
     .nav-next { text-align: right; }
 
-    .back-link { display: block; text-align: center; margin-top: 3rem; font-size: 0.7rem; letter-spacing: 0.25em; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
-    .back-link:hover { color: var(--ink); }
+    .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
+    .back-link:hover { background: var(--ink); color: var(--paper); }
 
     footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
     .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
@@ -697,21 +697,6 @@
   </div>
 
   <footer class="article-footer">
-    <div class="article-tags">
-      <a href="#" class="tag">インタビュー</a>
-      <a href="#" class="tag">タグ名</a>
-      <a href="#" class="tag">タグ名</a>
-    </div>
-    <nav class="article-nav">
-      <a href="#" class="nav-prev">
-        <span class="nav-direction">← PREV</span>
-        <span class="nav-title">前の記事タイトルがここに入ります</span>
-      </a>
-      <a href="#" class="nav-next">
-        <span class="nav-direction">NEXT →</span>
-        <span class="nav-title">次の記事タイトルがここに入ります</span>
-      </a>
-    </nav>
     <a href="index.html" class="back-link">← BACK TO LIST</a>
   </footer>
 
