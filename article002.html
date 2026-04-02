@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>石橋静河 ＆ 石井裕也監督 インタビュー — SUB POKKE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1a17;
+      --ink-mid: #4a4640;
+      --ink-light: #8a8278;
+      --paper: #faf8f4;
+      --warm: #f0ebe0;
+      --header-bg: #ffffff;
+      --accent: #5a4a3a;
+      --rule: #d8d0c0;
+      --serif: 'EB Garamond', 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+    header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .site-logo-wrap { display: flex; align-items: center; gap: 0.8rem; }
+    .site-logo { text-decoration: none; display: flex; align-items: center; }
+    .site-logo img { height: 28px; width: auto; display: block; }
+    .site-archives { font-family: var(--serif); font-style: italic; font-size: 0.88rem; color: var(--ink-light); letter-spacing: 0.12em; align-self: flex-end; line-height: 1; padding-bottom: 2px; margin-left: 0.5rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--ink-mid); font-weight: 400; transition: color 0.2s; }
+    nav a:hover { color: var(--ink); }
+
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+    .article-header { margin-bottom: 3rem; animation: fadeUp 0.6s ease both; position: relative; z-index: 1; }
+    .article-category { display: inline-block; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--ink-light); text-transform: uppercase; border-bottom: 2px solid #00aacc; padding-bottom: 0.2rem; margin-bottom: 1.5rem; font-weight: 400; }
+    .article-work-title { font-family: var(--serif); font-size: clamp(1.0rem, 2.5vw, 1.3rem); font-weight: 400; line-height: 1.5; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 0.4rem; }
+    .article-title { font-family: var(--sans); font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; line-height: 1.6; letter-spacing: 0.03em; margin-bottom: 1.5rem; }
+    .article-subtitle { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .article-meta span { font-size: 0.7rem !important; letter-spacing: 0.12em; color: var(--ink-light); font-weight: 500 !important; font-family: var(--sans) !important; }
+    .article-meta > span { color: var(--ink); font-weight: 500; }
+    .article-meta .meta-right { display: flex; gap: 1.5rem; }
+    .meta-divider { width: 1px; height: 12px; background: var(--rule); }
+
+    .hero-image { margin: 1rem 0; animation: fadeUp 0.7s 0.1s ease both; }
+    .hero-image .img-placeholder { width: 100%; aspect-ratio: 780/468; background: linear-gradient(135deg, #d8d0c0 0%, #c8bfae 50%, #b8b0a0 100%); display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; height: auto; display: block; max-width: 780px; }
+    .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
+
+    .article-body { animation: fadeUp 0.7s 0.2s ease both; }
+    .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 300; }
+    .article-intro-wrap { position: relative; padding-left: 1.6rem; margin-bottom: 2.5rem; }
+    .article-intro-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #1c1a17; }
+    .article-intro-wrap::after { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 5px; background: #1c1a17; }
+    .article-intro { font-size: 0.98rem !important; color: var(--ink-mid) !important; }
+    .article-subheading { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.05em; margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+
+    .qa-block { margin: 2rem 0; }
+    .qa-q { margin-bottom: 0.8rem; }
+    .qa-q .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: var(--ink); }
+    .qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
+    .qa-a { display: flex; gap: 0.3rem; align-items: baseline; }
+    .qa-label { font-size: 0.95rem; font-weight: 500; color: var(--ink); flex-shrink: 0; }
+    .qa-a .qa-text { font-size: 0.95rem; font-weight: 300; line-height: 2.0; color: var(--ink); }
+
+    .inline-image { margin: 3rem auto; width: 100%; max-width: 750px; display: block; }
+    .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
+    .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
+
+    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
+    .pull-quote p { font-family: var(--sans); font-style: italic; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
+
+    .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { background: var(--warm); border-color: var(--ink-mid); }
+
+    .article-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .article-nav a { background: var(--paper); padding: 1.5rem; text-decoration: none; color: var(--ink); transition: background 0.2s; }
+    .article-nav a:hover { background: var(--warm); }
+    .nav-direction { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--ink-light); display: block; margin-bottom: 0.5rem; }
+    .nav-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; }
+    .nav-next { text-align: right; }
+
+    .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
+    .back-link:hover { background: var(--ink); color: var(--paper); }
+
+    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-decoration: none; }
+    .footer-logo span { font-style: italic; opacity: 0.6; }
+    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .ph-icon { opacity: 0.25; }
+
+    @media (max-width: 640px) {
+      .article-wrap { padding: 2.5rem 1.2rem 4rem; }
+      .inline-image { margin: 2.5rem auto; }
+      .article-nav { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-logo-wrap">
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">ARCHIVES</span>
+
+  </div>
+</header>
+
+
+<article class="article-wrap">
+
+  <!-- ヒーロー画像（タイトルの上） -->
+  <div class="hero-image">
+    <img src="images/article002-hero.jpg" alt="記事ヘッダー画像">
+  </div>
+
+  <!-- 記事タイトル・メタ情報 -->
+  <div class="article-header">
+    <span class="article-category">Interview</span>
+    <p class="article-work-title">『映画 夜空はいつでも最高密度の青色だ』</p>
+    <h1 class="article-title">石橋静河 ＆ 石井裕也監督 インタビュー</h1>
+    <div class="article-meta">
+      <span>2017.05.05</span>
+      <div class="meta-right">
+        <span>撮影 岡本英里</span>
+        <span>取材・文 川端哲生</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="article-body">
+
+    <!-- 導入テキスト -->
+    <div class="article-intro-wrap"><p class="article-intro">映画賞を総なめにした『舟を編む』（2013）以降もたじろがない手付きで作品を発表し続ける石井裕也監督の最新作『映画 夜空はいつでも最高密度の青色だ』が5月13日より公開される。同時代的な感度で現代詩の地平を拓く女流詩人、最果タヒの同名詩集の映画化となる本作は、漠然と不安が漂う近視眼的な都会の暮らしの中で、全身を投げ出すように今を生きる２人の男女が心を通わせる恋愛映画。主演の美香役に抜擢されたのが、新人女優、石橋静河。他の誰にも代替不可能と感じさせるほどの存在感で美香を体現しているが、苦闘の連続だったという映画初主演の現場について、２人に話を聞いた。</p></div>
+
+    <!-- 引用ブロック1 -->
+    <div class="pull-quote">
+      <p>「明確な意志があったらああはならない。無自覚の面白さですよね。デビューに近い状態でのその無邪気さは貴重なものなんです。」（石井）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">演技経験のまだ少なかった石橋静河さんを美香役にキャスティングされた経緯は？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">プロデューサーとの話の中で、この映画にはビジュアル面も含め、新しい気分がどうしても必要で、そのために主演には新人を起用したいとなったんです。それで新人女優を探すわけですけど、実はそれほど探してはいなくて。石橋さんのことは周囲で噂になってたんです。凄いやつが出てきた、と。もっと言ってしまうと、『ぼくたちの家族』（2014）で原田美枝子さん、『ハラがコレなんで』（2011）では石橋凌さんと仕事をさせて頂いていて、彼女のご両親には先にお世話になっているんです。だから最初は、お２人の娘さんというイメージから入った。その流れで一度会ってみて、その後も何度か時間を作って会った上で決めました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">この映画の現場を通して、ご両親を彷彿とさせるものはありましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">原田美枝子さんの若い頃を僕は知っているわけではないので確信を持っては言えないですけど、堂々とした佇まいには通ずるものが、もしかしたらあるかもしれないですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">私は石井監督の『ぼくたちの家族』を以前に観ていて、いつかご一緒できたらなと思っていました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">実際に現場を経験してみて、いかがでしたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">石井監督の現場だからというより、私はちゃんと役を演じるということが初めてに近かったので、脚本を読んで、どうやって役に向き合うかとか、どうやって監督に向き合うかというところから、全てが初めての挑戦でした。とにかく必死だったんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">両親にお世話になっているので、申し訳ないなという気持ちが最初は大きかったんだけど、撮影が進むにつれ、その気持ちが減ってきて…。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">私は、監督と両親に繋がりはあっても、現場では正面から向き合って欲しいと望んでいたので嬉しかったです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">お世話になった人の娘さんを大切に扱わないといけないという気持ちが減っていった原因が石橋さんにあったからね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">私が、ただ監督に言われたことに食らい付いていくことしか出来なくて、監督も私に遠慮している場合じゃない状態で。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">お借りした姿でお返しするっていう目標が一応あったんだけど、そういう気持ちはすぐ無くなったというか、正直一番偉いのは映画であって、映画のためにだったら多少は傷ものになっても仕方ないという気持ちが段々と首をもたげてきたというか…（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+<div class="inline-image">
+  <img src="images/article002-1.jpg" alt="写真1">
+</div>
+
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">対等な関係を徐々に築いていく過程があったわけですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">対等というかむしろ自分の方が下だったかもしれない。演者の方にある種のスキルやテクニックがあれば、悠然と構えていられるんですけど、彼女は初めての現場ということで当然そうじゃないわけで、こちらが必死にならざるを得ない。まあでも必死なのはお互い同じだからイーブンなのかもしれないけど、心情的に上か下かと言われたら下でしたね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">私はもっと監督の求めていることに応えたいなって思っていたんですけど、必死にやっても全然辿り着けない。そういう日々だったので、悔しいというか、申し訳ない気持ちが一番にあります。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">完成した映画を初めて観た時に率直にどう感じましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">最初の試写では全く客観視できなくて、観ていても撮影中の記憶が蘇ってきてしまうし、早く劇場から逃げ出したいなって気持ちで。２度目はベルリン映画祭の時に客席で観たんですけど、そこではお客さんの反応を直に体感しながら観られました。そこで初めて素晴らしい映画だなって思えたところはあります。だから、いろんなことを冷静に眺められるようになったというか、撮影した時の思いを整理できるようになったのは、ここ最近です。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">５年は掛かると思うよ。客観的に分析できるようになるには。監督として作品を客観視するのにもそれくらい掛かるし。むしろ、５年ならまだいい方かもしれない。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">はい。現場でも、言われることに対して頭では分かっていても身体がそのように動かないということの連続で。つまりそれは分かっていないということだと思うんです。５年で分かるように頑張ります。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">石井監督は、過去に「子宮で考えて演技して下さい」という言葉で女優に演出をされていたこともあったそうですが。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">それを言ったのは10年近く前のことですね（笑） 当時は女優というか、女性に対してまるで知識が無いからこそ持っていた希望的な感情でした。つまり「子宮で考えて演じてくれ」と言ったところで、言ってる自分の方が意味が分かっていないですから。あわよくばそうなって欲しいというお祈りみたいなものだったんです。今はそんなことは言わないです。女性への畏怖のようなものが下地にあったと思うし、男が知り得ない次元の女性の凄みや強みをちゃんと見せてくれっていう言い方が当時はそれだったんだと思いますね。</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article002-2.jpg" alt="写真2">
+</div>
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">美香を演じる上で、石井監督からはどのような演出がありました？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">たぶん「違う」って言葉のみ覚えてるんじゃないかなと思うけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">そうですね。何か言われても私がちゃんと答えを出せないというか、やってみては修正する、やってみては修正するっていうトライ＆エラーのような状態だったので。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">基本的には演者に委ねていくやり方だったんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">状況次第ですね。僕のやり方を貫いたところで、受け手は違うわけで、池松君にしても、松田龍平さんにしても、演者それぞれで違う。誤解が面白さを生むというか、誤解した上でそれ以上のものが出てくるっていうのが、俳優と監督のベストな関係だと思うので。それをまずは狙うこと、委ねる、という基本原則はあるんです。ただそうはならないこともあるので言い方、やり方を変えていくわけですよね。で、最終的に「違う」って突き放すしかなくなる場合もある。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">ここまで話されているような役柄への葛藤や焦燥は、今という瞬間を生きる劇中の美香の刹那とシンクロしているように感じられました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">シンクロさせるべきだと思っていました。そうすることでしか突破出来ないくらいに思っていたので。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">演じながら、どの程度、自覚的でしたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">（石井監督へ向かって）何で、笑ってるんですか？（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">明確な意志があったらああはならない。無自覚の面白さですよね。デビューに近い状態でのその無邪気さは貴重なものなんです。たぶん次の現場ではああいうお芝居にはならないはずなので。だからからこそ、今度はテクニックが必要になってくると思うけど。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">この映画に映る女優としての石橋さんは、二度と見られないものということですよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">おそらくそうですね。もし今後も全く成長しなかったとしたらまた話は別ですけど（笑）</span>
+      </div>
+
+<div class="inline-image">
+  <img src="images/article002-3.jpg" alt="写真3">
+</div>
+
+
+    </div>
+
+    <div class="pull-quote">
+      <p>「美香はぶっきらぼうで、言葉が強い。不安だから言ってしまうというか、必ずしも全てが本心ではないはずなんです。」（石橋）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">慎二を演じた池松さんとのお芝居の呼吸はいかがでしたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">池松さんの方から呼吸を合わせにきてくれたというか、歩みを遅らせて、同じ歩幅で寄り添ってくれていたので、それに助けられたんですけど、それだけだと悔しい。美香と慎二は横に並び立っている関係だから、私も何とかして池松さんを驚かせるくらいのことが出来たらとはずっと思っていました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">強いて言えば、男性である石井監督の視点は美香を受ける側の慎二の方にあったんでしょうか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">いや、どちらかと言うと、視点は石橋さんと共にあったと思います。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">美香の視点ってことですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">そう。なぜなら、原作の最果さんの詩の目線に女性を感じたので、その目線の先に何があるかを考えたんです。それが慎二なんです。だから、割と僕の視座は美香の方にあったと思うんですよね。だからこそ、美香の芝居を納得がいくものにしたいと感じることが多かった。美香、つまり石橋さんと一緒に慎二を見ていたというか。あと、池松君は頭がいいし、相手の芝居を受けようとするんです。それだけでは昨今の池松君の芝居をなぞるようで、池松君との元々の個人的な関係もあったので、物足りないと思った。今回の映画では、相手を受けようとすること、或いは気遣いみたいなものを池松君から出来る限り取り除きたかったんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">池松さんのイメージにあまり無かった序盤の饒舌で余裕のない慎二が、徐々に普段の池松さんに近いナチュラルな芝居に変容していく感じは、美香が慎二に心を許していく状況にリンクして見えました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">そうですね。更に、最終的には慎二が美香を引っ張っていくところまでいきたかった。僕は常に美香側にいたと思います。石橋さんが僕の目線で演じていたと言うとまた語弊がありますけど（笑）</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article002-4.jpg" alt="写真4">
+</div>
+
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">美香と慎二の関係についてどのように捉えましたか。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">私は恋愛というより同志に近いと思いました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">いわゆる恋愛という言葉に対する疑念を２人は日常的に抱えているんです。好きという気持ちすら疑いの眼差しを向けてしまうというね。東京なんかで生きていても疑わしいことばかりですから。だから、この関係を敢えて言葉にするなら、あらゆることを疑って何も信じられない２人がある感情を通い合わせていくというものだと思います。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">美香と慎二の関係のプラトニックさは、最果さんの紡ぐ言葉の力をより立ち上がらせているようにも感じます。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">個人的に性描写をあまり好まないというのは大前提としてはあって、肉体的な接触というものを大事にしているから逆に描かないところがあるんですよ。劇中で２人が触れ合うのは２度だけなんですけど、どこで人と人が触れ合うのかという部分を大切にしたんです。原作で描かれる細かな感情の部分をどう表現するかを考えていって判断しましたね。撮影中に助監督が、「ここでキスした方がいいんじゃないですかね？」とかって言ってきましたけどね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">え、そうだったんですね（笑）知らなかったです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">「マジっすか？何でそうなるんですか？」って返したけど。夜遅かったせいなのかもしれない（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">背景として映し出される実際の渋谷や新宿といったロケーションも、世界観を高めていました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">この映画には実際の東京の街の風景が必要だったんです。東京を彷徨っている２人のリアリティは、最果さんの原作を映画化する上で必然でした。</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article002-5.jpg" alt="写真5">
+</div>
+
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">石橋さんは原作も読まれましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">監督と初めてお会いする直前に読みました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">詩である原作には明確な筋はないですが、根底に流れているものは映画に見事にトレースされていました。台本を最初に読んだ時の印象は？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">原作を読み終えた時、言葉の１つ１つには意味が分からないものもあるのに、うまく言えないんですけど、感覚的にスッと理解できたんです。台本を読んだ時も同じ気持ちになったので、納得感みたいなものはありました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">書いた本人を前にしたこの状況では、そういう風にしか言えないよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">たぶん、美香が何をどうするかってことに必死だったと思うので、作品全体にまで視野を広げる余裕はなかったんじゃない？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">そうですね。全体を見ることが出来なかったというか、それどころじゃなかったので。でも、最初に美香の台詞を読んだ時に、何でこんなこと言うんだろうなって思ったんです。美香はぶっきらぼうで、言葉が強い。不安だから言ってしまうというか、必ずしも全てが本心ではないはずなんです。自分で思っている以上のことを言ってしまう女性なんだなって言うのは、読みながら分かってきたことでしたね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">美香のモノローグと、実際に口にして発する台詞との差異が、気持ちを言葉に出来ないもどかしさみたいなものとして表されている気がしました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石井：</span>
+        <span class="qa-text">今日、ずっと「必死」って言葉を言っているけど、でも本当にそれに尽きるからね（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">最後に。劇中に「スマホで何でも調べられる世の中で知らないことがあることが怖い」という現代人の病理を象徴するような台詞がありました。石橋さんは、東京を生きる若者についてどういう思いがありますか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">石橋：</span>
+        <span class="qa-text">私もその若者の一員なんですけど…。私は、海外に４年間留学していて、日本に帰って来た時に物凄く窮屈さを感じて、暮らしていくうちに慣れていったんですけど、この映画を観た時にそれを思い出したんです。本当は生きづらいと感じているけど、それを見ない振りをしていた。同じように感じている同世代は多いんじゃないかなって思います。自分の中で誤摩化したりしないと東京で生きていけなくて、闘っている人は多いと思うんです。そう感じさせてくれたのも美香を演じたからで、それまでは私も見ない振りをしていたところがあったので、この映画が気付かせてくれたと思います。</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="index.html" class="back-link">← BACK TO LIST</a>
+  </footer>
+
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
