@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>臼田あさ美×太賀×冨永昌敬監督 インタビュー — SUB POKKE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1a17;
+      --ink-mid: #4a4640;
+      --ink-light: #8a8278;
+      --paper: #faf8f4;
+      --warm: #f0ebe0;
+      --header-bg: #ffffff;
+      --accent: #5a4a3a;
+      --rule: #d8d0c0;
+      --serif: 'EB Garamond', 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+    header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .site-logo-wrap { display: flex; align-items: center; gap: 0.8rem; }
+    .site-logo { text-decoration: none; display: flex; align-items: center; }
+    .site-logo img { height: 28px; width: auto; display: block; }
+    .site-archives { font-family: var(--serif); font-style: italic; font-size: 0.88rem; color: var(--ink-light); letter-spacing: 0.12em; align-self: flex-end; line-height: 1; padding-bottom: 2px; margin-left: 0.5rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--ink-mid); font-weight: 400; transition: color 0.2s; }
+    nav a:hover { color: var(--ink); }
+
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+    .article-header { margin-bottom: 3rem; animation: fadeUp 0.6s ease both; position: relative; z-index: 1; }
+    .article-category { display: inline-block; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--ink-light); text-transform: uppercase; border-bottom: 2px solid #00aacc; padding-bottom: 0.2rem; margin-bottom: 1.5rem; font-weight: 400; }
+    .article-work-title { font-family: var(--serif); font-size: clamp(1.0rem, 2.5vw, 1.3rem); font-weight: 400; line-height: 1.5; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 0.4rem; }
+    .article-title { font-family: var(--sans); font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; line-height: 1.6; letter-spacing: 0.03em; margin-bottom: 1.5rem; }
+    .article-subtitle { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .article-meta span { font-size: 0.7rem !important; letter-spacing: 0.12em; color: var(--ink-light); font-weight: 500 !important; font-family: var(--sans) !important; }
+    .article-meta > span { color: var(--ink); font-weight: 500; }
+    .article-meta .meta-right { display: flex; gap: 1.5rem; }
+    .meta-divider { width: 1px; height: 12px; background: var(--rule); }
+
+    .hero-image { margin: 1rem 0; animation: fadeUp 0.7s 0.1s ease both; }
+    .hero-image .img-placeholder { width: 100%; aspect-ratio: 780/468; background: linear-gradient(135deg, #d8d0c0 0%, #c8bfae 50%, #b8b0a0 100%); display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; height: auto; display: block; max-width: 780px; }
+    .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
+
+    .article-body { animation: fadeUp 0.7s 0.2s ease both; }
+    .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 300; }
+    .article-intro-wrap { position: relative; padding-left: 1.6rem; margin-bottom: 2.5rem; }
+    .article-intro-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #1c1a17; }
+    .article-intro-wrap::after { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 5px; background: #1c1a17; }
+    .article-intro { font-size: 0.98rem !important; color: var(--ink-mid) !important; }
+    .article-subheading { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.05em; margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+
+    .qa-block { margin: 2rem 0; }
+    .qa-q { margin-bottom: 0.8rem; }
+    .qa-q .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: var(--ink); }
+    .qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
+    .qa-a { display: flex; gap: 0.3rem; align-items: baseline; }
+    .qa-label { font-size: 0.95rem; font-weight: 500; color: var(--ink); flex-shrink: 0; }
+    .qa-a .qa-text { font-size: 0.95rem; font-weight: 300; line-height: 2.0; color: var(--ink); }
+
+    .inline-image { margin: 3rem auto; width: 100%; max-width: 750px; display: block; }
+    .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
+    .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
+
+    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
+    .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
+
+    .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { background: var(--warm); border-color: var(--ink-mid); }
+
+    .article-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .article-nav a { background: var(--paper); padding: 1.5rem; text-decoration: none; color: var(--ink); transition: background 0.2s; }
+    .article-nav a:hover { background: var(--warm); }
+    .nav-direction { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--ink-light); display: block; margin-bottom: 0.5rem; }
+    .nav-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; }
+    .nav-next { text-align: right; }
+
+    .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
+    .back-link:hover { background: var(--ink); color: var(--paper); }
+
+    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-decoration: none; }
+    .footer-logo span { font-style: italic; opacity: 0.6; }
+    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .ph-icon { opacity: 0.25; }
+
+    @media (max-width: 640px) {
+      .article-wrap { padding: 2.5rem 1.2rem 4rem; }
+      .inline-image { margin: 2.5rem auto; }
+      .article-nav { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-logo-wrap">
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">ARCHIVES</span>
+
+  </div>
+</header>
+
+
+<article class="article-wrap">
+
+  <!-- ヒーロー画像（タイトルの上） -->
+  <div class="hero-image">
+    <img src="images/article003-hero.jpg" alt="記事ヘッダー画像">
+  </div>
+
+  <!-- 記事タイトル・メタ情報 -->
+  <div class="article-header">
+    <span class="article-category">Interview</span>
+    <p class="article-work-title">『南瓜とマヨネーズ』</p>
+    <h1 class="article-title">臼田あさ美×太賀×冨永昌敬監督 インタビュー</h1>
+    <div class="article-meta">
+      <span>2017.11.01</span>
+      <div class="meta-right">
+        <span>撮影 轟あずさ</span>
+        <span>取材・文 川端哲生</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="article-body">
+
+    <div class="article-intro-wrap"><p class="article-intro">揺れ動く女性の心情をきめ細かな筆致で描いた漫画家、魚喃キリコの代表作『南瓜とマヨネーズ』がこの上ない絶妙な配役でスクリーンに蘇る。原作のヒリヒリするような切実さや鬱屈を忠実に再現しながら、登場人物達をよりチャームあるキャラクターとして仕立てたのは、原作者とは２０年来の親交のある冨永昌敬。都市の片隅で暮らす恋人達のありふれた日常の尊さを噛み締めずにはいられない本作にて、主人公のツチダを演じる臼田あさ美、ツチダと同棲中の恋人、せいいちを演じる太賀。そして、冨永監督の３人に話を聞いた。</p></div>
+
+    <div class="pull-quote">
+      <p>「馬鹿」と監督が表現された、せいいちの抜けているところや愛嬌。そこが原作との大きな違いなのかなって意識はありました。（太賀）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">「ツチダ役には臼田さん以外ありえない」という冨永監督の言葉がこの映画の発端にあったと伺いました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">僕が勝手に言っていたんですよ。ツチダに似ていると思った部分もあるにはあるけど、理由はよく分からないんです。結果的にはピッタリでした。臼田さんもそう言われても困ると思うけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">似ているかどうかは自分では分からないけど、この役は私がやりたい！という気持ちになったのは確かで。でもそこに理由はなくて、何であんなに執着していたのか分からないくらい、最初はやりたいという気持ちだけが強くあったんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">臼田さん、この原作はいつ頃に読んでたの？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">私、漫画っ子ではないので、リアルタイムでは読んでいなくて、映画化された『strawberry shortcakes』がきっかけで魚喃キリコさんを知って、『blue』とか、この『南瓜とマヨネーズ』も読んではいたけど、思いが強くなったのは冨永監督がこれを原作に映画を撮るかもって話をしてくれて改めて読み直した時かな。今から３年前くらいですよね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">早い段階で、まず冨永監督と臼田さんの間で意志の共有があったんですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">これはもう完全にフライングなんです。勝手に僕が盛り上がっていたことが臼田さんに伝わってしまったんですよ。この作品のスタイリストを担当している加藤將って男が実はその当時の臼田さんのマネージャーと友達で、そこ経由で探りを入れたんだけど、その探りが臼田さん本人の耳に…（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">へぇ！そうだったんですね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">尾ヒレが付いて、私が制作段階から積極的に携わったみたいになっていますけど、それはちょっと大袈裟なんです。最初は純粋に1人の俳優として冨永監督とこの映画を撮ることを楽しみにしていて、その過程で私達も思いもしなかった展開があって、クランクインまでの時間が予定より長くなったおかげで色々な話し合いをすることになったんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">そうして選ばれるべくして選ばれた配役とも言えそうなせいいちとハギオですが、太賀さんの演じるせいいちは原作に比べて生活力がある男に映ります。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">そこは演出として意図的にやったところもあって、せいいちを「馬鹿」にしたいと思ったんです。それはハギオさんも同じで、男子２人を馬鹿にするためにどうするか考えた時に、例えば、異常にバイトをしてしまうとか（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">愛すべき馬鹿ですよね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">それが結果として、せいいちの行動ひとつひとつに生活力が伴うことになったんです。キャラクターとしてそうするつもりはなかったんです。その一面が太賀にすごく合っていたのかもしれない。原作より下の年齢設定だけど、配役で太賀の名前が挙がった時に、閃いたというか、あいつ若いけど大丈夫かもしれないって思ったんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">原作より下げた設定よりも更に自分の年齢は下だったし、ちゃんと説得力はあるのか心配していたんですけど、あらためて映画を観返して、意外にそこは大丈夫だったなって、安心しました。役作りについて監督から具体的な話はなかったですけど、原作では輪郭がはっきりしていないせいいち像に対して、脚本ではその輪郭が描かれている気がしたんですよね。それは、さっき「馬鹿」と監督が表現された、せいいちの抜けているところや愛嬌ですよね、そこが原作との大きな違いなのかなって意識はありました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">せいいちのキャラクターが表に出てくるのはバンドの元メンバー達と話をする居酒屋になるのかな。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">そうですね。内面が描かれるのはあの場面が最初かもしれないですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">冒頭の棚を作るところなんかは２人の生活の中で起こっている小さな出来事ではあるけど、居酒屋のシーンは、アパートから出たせいいちという人間が明かされる場面で、無職で、ほぼ引きこもりだけど頭が堅い。ノリが悪くて、非常に堅いことを言う男なんです。ああいう感じはやりたかった。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">原作では全体としてツチダを巡って周りが動いている感じがあるんですけど、監督と脚本の話をしていた時に、「俺は男だし、男もちゃんと描きたい」みたいなことをおっしゃっていて。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">いや、そういうカウンターみたいな理由ではないですよ（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">40歳のおじさんがそのままやるには難しいわけです。僕と同年代の魚喃さんが２０年くらい前に描いた漫画なので、それを今の自分がそのまま描いても勝てない。烏滸がましい言い方をすると、いかに自分の映画にしようと向かっていった時に、それが男達に何をさせるかってことだったんです。</span>
+      </div>
+
+    </div>
+
+    <div class="pull-quote">
+      <p>魚喃さんの漫画は一見すると絵が強烈ですけど、それ以上に言葉なんです。そのままやっても漫画を超えられないと思った。（冨永）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">原作のテイストに、映画では冨永監督の持ち前のユーモアが随所にまぶされているように感じました。シリアスな場面にも笑ってしまう可笑しさがあります。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">そういうシーン、沢山ありますよね。当人は真剣だから笑わせるつもりでやってないはずなのに、客観的に見ると笑っちゃう。２人が生きている感じ、生活の匂いはグッと上がっていて、映画に散りばめられている気がします。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">原作は月刊誌の連載だったので、世の中に順を追って発表していくにあたって気にしなければいけないことがあったと思うんですよ。それがトーンの一貫性に繋がったはずで、魚喃さんの場合、それは「言葉」だと思うんです。魚喃さんの漫画は一見すると絵が強烈ですけど、それ以上に言葉なんです。吹き出しより、特にモノローグの言葉の力が強い。そのままやっても漫画を超えられないと思ったんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">モノローグは原作通りではないですよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">そのままは使ってないですよね。その抜き出し方も冨永監督の色だなって思いますね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">原作では顔を合わせることはないツチダ、せいいち、ハギオの三者が映画では鉢合わせします。修羅場を安易に想像しそうな場面ですが、大きな事件は起こりません。軽妙でとても映画的なシーンだと思いました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">まず単純に１つは、３人が遭遇したら面白そうだなという思いつきですね。鉢合わせすることもハギオならあるかなって気がしたんです。いつ訪ねてくるか分からないような男だし、ツチダはそれを断れないだろうし、せいいちはそれに大して関心を示さないだろうし。そうすると男２人が喧嘩にはなることはまずない。そう考えたら絶対にあり得ると思ったんです。そして、そんな出来事があったとしても何の爪痕も残さない。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">妙にリアリティがありますよね。こんなことあるのかもなって、演っていても思いました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">即興に思えるような台詞のやり取りもありますよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">臼田さんも自然に笑っていましたよね。ただアドリブは無くて基本的に脚本通りでしたけど、このシーンは現場で監督が台詞を足したところはありましたよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">そう、あった。本番の直前くらいのリハで、オダギリさんに監督が耳打ちして、本当に即興でしたよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">瞬間瞬間に、こういうことをしたら面白くなるなってことを俳優を見ながら探すわけです。どんな監督も皆、そういうことをされると思いますけど。特にあの場面はいろいろアイデアが現場で出てきて、時間はタイトだったけど、面白かった。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">私的にはすごく哀しいシーンだなって思うんですよね。みんなの気持ちが全然向き合ってないのが一瞬で分かっちゃうから。せいちゃんの状況への関心の無さとか、ツチダも自棄糞な感じがあるし。哀しいんですけど、客観的に見ると笑えてくる状況ですね。監督からももっと笑ってもいいよ、みたいな演出があった気がする。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">それはね、おそらくツチダとしてではなく、もし臼田さんだったら笑うんじゃないかって考えたんですよ。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">確かにあの状況、私だったら笑うかも（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">あのシーンの監督の指示で覚えているのは、せいいちが脱いだ靴下を画面の上手から下手へスローイングしてくれって。監督はその画にかなり拘っていて。でも、心情面の話は敢えてしなかったです。そういう良さもあったかもしれないですよね。</span>
+      </div>
+
+    </div>
+
+    <div class="pull-quote">
+      <p>私がなぜ、ツチダに執着したのか今だから分かる。映画を撮る前に訊かれてもペラペラなことしか言えなかったと思う。（臼田）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">原作では直接的には描かれない、せいいちが歌をツチダに聴かせるシーンについて。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">歌の内容は台本には書いてないんですよ。やくしまるさんに素晴らしい劇中歌を作って頂いたことにかなり負ってはいるんですけど、せいいちが歌を唄っている、それをツチダが聴いているということ自体は、実はお土産みたいなものなんです。大事なのはそこに至るまでだと思っていたので。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">ツチダがずっと待ち侘びていたもので、２人が積み上げてきた生活の到達点でもあります。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">自分で撮っていておいてなんですけど、歌がなくても映画は成り立ったと思うんです。だけど、やくしまるさんが曲を作ってくれて、それを太賀が唄うってことで、「あ、映画だな」と思わされた。どれだけ俺は抜けてるんだって話ですけど（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">曲は撮影が始まって、少し経ってから完成したんです。クランクインまでに間に合わなくて、同時進行だったので、いつ完成するのか、どんな曲になるのかも分からないまま、ドキドキしながら待っていたんですけど、いざ届いてみたら素晴らしい曲だった。これは丁寧に唄わなければ、と思いました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">監督として、脚本を書いた人間として、本当に助けられましたね。たぶんあの歌が無かったら、２人には酷だったかもしれない。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">私はあのシーンで、どんな歌をどんな風に唄うのか、撮影当日まで知らなかったので、やくしまるさんを信用していないという意味ではなく、自分の感情がもし動かなかったらどうしようって気持ちもゼロではなかったんです。ただここまでくると、せいちゃんがギターを持って唄い出すだけで涙が出てしまうような感覚にもなっていて、たぶん「曲が出来たよ」って言葉だけで泣きそうな状態だったかもしれない。撮影を重ねる中で、どのシーンを撮っていても、その瞬間に自分が思わなかったこと、感じなかったことは無理をして芝居しなくていいという前提でやっていたけど、脚本にあることをちゃんとその通りに表現できる環境があったおかげで無理をしないで演じられていたので、最後のシーンも嘘はつけないと強く思っていたんです。でも監督もスタッフも口で言うわけじゃないけど、遂にこの時が来たね、みたいな意識を持ってくれていて、いざ撮影の時に、初めて歌を聴くという状況をちゃんと撮るために、協力して下さったんです。だから初めて歌を聴いたツチダの顔がちゃんと撮れてる。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">臼田さん、準備している時も屋上に待避してたよね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">練習している様子も見たくなくて（笑） 事前に情報は入れないって気持ちでいました。で、ずっと屋上でしゃがんでいたら、「じゃあ行きますか」って監督が呼びにきてくれて。これはプロとしては良くないことなのかもしれないけど、この映画のあの瞬間はあれで間違いなかったし、それをやらせてくれたことには感謝しかないし、何一つ嘘が無いシーンだなって思います。もちろん全部お芝居だけど、「そういうんじゃない！」って気持ちがある。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">本番は緊張しましたし、これで臼田さんが「はぁ〜！？」みたいになったらどうしようって（笑） 不安はあったし、歌もやくしまるさんに直接指導して頂いて、本番当日もライブハウスの地下で何度も練習していたんです。これで一発目に音をはずしたらどうしようって思っていました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">やくしまるさんに唄い出しのアドバイスをされてたよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">走りすぎないことと、音程のキーは違っても気にしなくていいということは優しく言われました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">でも、やくしまるさん含め、プロフェッショナルな方々が集まって協力して下さったけど、いい意味でそれを感じなかったというか、それはみんながこのシーンは技術を見せるわけではないということを理解した上でのアドバイスをして下さったからだと思うんです。本当にいい環境だったと思います。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">唄い始めてからは自分が伸び伸びと唄えるようになって、唄い終わった後も自然とツチダを見て、嬉しい気持ちとか自然な笑顔とか、最も素直に出せている場面だと思います。それは万全の体勢があったからこそですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">現場のことで言うと、コンガ奏者の大儀見元さんに太賀がコンガを習っている様がすごく良くて、これはいいシーンになるなって直感しました。やくしまるさんと大儀見さんの存在は大きかったですね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">ギターではなくてコンガという照れもせいいちらしくて、２人の関係が表れていました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">太賀：</span>
+        <span class="qa-text">ギターでそのまま唄っていたら変に構えたり、気持ちが高ぶったりして唄えなかったりするのかなって、終わってみてだけどそう思いますね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">臼田：</span>
+        <span class="qa-text">演ってみて思うことは本当に沢山あって、それこそが本当の気持ちだなって思います。最初にも話しましたけど、私がなぜ、こんなにツチダに執着したのか今だから分かる。映画を撮る前に訊かれてもペラペラなことしか言えなかったと思う。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">冨永：</span>
+        <span class="qa-text">映画が完成してから、２人からこういう言葉を聞けると僕らとしては嬉しいわけです。つまり、何から何まで全て決めて作ったわけでは必ずしもないので。さっき臼田さんが話した、直前に歌を聞かないようにしたなんてことは最たるもの。太賀にしても、どんな歌を唄うのかは台本に書いてあるわけではないので、演じる人次第ではもしかしたら戸惑ったかもしれない。チャンスオペレーション的なことをほとんど受け入れてくれたんです。そういった作り方がすごくいい結果に繋がったのは２人を始め、皆のおかけだと思っています。撮影が終わってからまだ台本を一度も読み直してないけど、たぶん、かなり変わってるんじゃないかと思いますね（笑）</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="index.html" class="back-link">← BACK TO LIST</a>
+  </footer>
+
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
