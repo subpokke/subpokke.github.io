@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>門脇麦 × 岸善幸監督 インタビュー — SUB POKKE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1a17;
+      --ink-mid: #4a4640;
+      --ink-light: #8a8278;
+      --paper: #faf8f4;
+      --warm: #f0ebe0;
+      --header-bg: #ffffff;
+      --accent: #5a4a3a;
+      --rule: #d8d0c0;
+      --serif: 'EB Garamond', 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+    header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .site-logo-wrap { display: flex; align-items: center; gap: 0.8rem; }
+    .site-logo { text-decoration: none; display: flex; align-items: center; }
+    .site-logo img { height: 28px; width: auto; display: block; }
+    .site-archives { font-family: var(--serif); font-style: italic; font-size: 0.88rem; color: var(--ink-light); letter-spacing: 0.12em; align-self: flex-end; line-height: 1; padding-bottom: 2px; margin-left: 0.5rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--ink-mid); font-weight: 400; transition: color 0.2s; }
+    nav a:hover { color: var(--ink); }
+
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+    .article-header { margin-bottom: 3rem; animation: fadeUp 0.6s ease both; position: relative; z-index: 1; }
+    .article-category { display: inline-block; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--ink-light); text-transform: uppercase; border-bottom: 2px solid #00aacc; padding-bottom: 0.2rem; margin-bottom: 1.5rem; font-weight: 400; }
+    .article-work-title { font-family: var(--serif); font-size: clamp(1.0rem, 2.5vw, 1.3rem); font-weight: 400; line-height: 1.5; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 0.4rem; }
+    .article-title { font-family: var(--sans); font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; line-height: 1.6; letter-spacing: 0.03em; margin-bottom: 1.5rem; }
+    .article-subtitle { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .article-meta span { font-size: 0.7rem !important; letter-spacing: 0.12em; color: var(--ink-light); font-weight: 500 !important; font-family: var(--sans) !important; }
+    .article-meta > span { color: var(--ink); font-weight: 500; }
+    .article-meta .meta-right { display: flex; gap: 1.5rem; }
+    .meta-divider { width: 1px; height: 12px; background: var(--rule); }
+
+    .hero-image { margin: 1rem 0; animation: fadeUp 0.7s 0.1s ease both; }
+    .hero-image .img-placeholder { width: 100%; aspect-ratio: 780/468; background: linear-gradient(135deg, #d8d0c0 0%, #c8bfae 50%, #b8b0a0 100%); display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; height: auto; display: block; max-width: 780px; }
+    .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
+
+    .article-body { animation: fadeUp 0.7s 0.2s ease both; }
+    .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 300; }
+    .article-intro-wrap { position: relative; padding-left: 1.6rem; margin-bottom: 2.5rem; }
+    .article-intro-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #1c1a17; }
+    .article-intro-wrap::after { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 5px; background: #1c1a17; }
+    .article-intro { font-size: 0.98rem !important; color: var(--ink-mid) !important; }
+    .article-subheading { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.05em; margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+
+    .qa-block { margin: 2rem 0; }
+    .qa-q { margin-bottom: 0.8rem; }
+    .qa-q .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: var(--ink); }
+    .qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
+    .qa-a { display: flex; gap: 0.3rem; align-items: baseline; }
+    .qa-label { font-size: 0.95rem; font-weight: 500; color: var(--ink); flex-shrink: 0; }
+    .qa-a .qa-text { font-size: 0.95rem; font-weight: 300; line-height: 2.0; color: var(--ink); }
+
+    .inline-image { margin: 3rem auto; width: 100%; max-width: 750px; display: block; }
+    .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
+    .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
+
+    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
+    .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
+
+    .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { background: var(--warm); border-color: var(--ink-mid); }
+
+    .article-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .article-nav a { background: var(--paper); padding: 1.5rem; text-decoration: none; color: var(--ink); transition: background 0.2s; }
+    .article-nav a:hover { background: var(--warm); }
+    .nav-direction { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--ink-light); display: block; margin-bottom: 0.5rem; }
+    .nav-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; }
+    .nav-next { text-align: right; }
+
+    .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
+    .back-link:hover { background: var(--ink); color: var(--paper); }
+
+    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-decoration: none; }
+    .footer-logo span { font-style: italic; opacity: 0.6; }
+    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .ph-icon { opacity: 0.25; }
+
+    @media (max-width: 640px) {
+      .article-wrap { padding: 2.5rem 1.2rem 4rem; }
+      .inline-image { margin: 2.5rem auto; }
+      .article-nav { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-logo-wrap">
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">ARCHIVES</span>
+
+  </div>
+</header>
+
+
+<article class="article-wrap">
+
+  <!-- ヒーロー画像（タイトルの上） -->
+  <div class="hero-image">
+    <img src="images/article004-hero.jpg" alt="記事ヘッダー画像">
+  </div>
+
+  <!-- 記事タイトル・メタ情報 -->
+  <div class="article-header">
+    <span class="article-category">Interview</span>
+    <p class="article-work-title">『二重生活』</p>
+    <h1 class="article-title">門脇麦 ×  岸善幸監督 インタビュー</h1>
+    <div class="article-meta">
+      <span>2016.06.13</span>
+      <div class="meta-right">
+        <span>撮影 朝岡英輔</span>
+        <span>取材・文 川端哲生</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="article-body">
+
+    <div class="article-intro-wrap"><p class="article-intro">国内外で高い評価を得たNHKドラマ『開拓者たち』『ラジオ』等で知られる映像作家、岸善幸の初監督作『二重生活』が、６月２５日より全国公開される。原作は直木賞作家・小池真理子の同名小説。修士論文の題材として、動機の無い尾行を実践する哲学科の女子学生が、他者の日常を覗き見するうちに、生活を浸食され、自縄自縛に陥っていく心理サスペンス。まるで現象を記録していくようなスリリングな映像は、空虚な現代社会や、人間の持つ多面性を浮かび上がらせる。本作にて主人公の女子学生、白石珠を演じるのは、これが単独初主演となる実力派女優、門脇麦。ドキュメンタリーで培った岸監督の独自の演出術の下、如何にして、珠という実在感ある女性を演じたのか、２人に話を聞いた。</p></div>
+
+    <div class="pull-quote">
+      <p>演出も撮影もアプローチを変えながら、リアルな映像を求めていく。「お芝居を記録していく」という考え方でやっているんです。（岸）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">門脇さんは、初号試写で作品を客観的に面白いと思えたのはこの作品が初めてだったそうですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">出演した作品を観る時、どのシーンを観ても「ここ大変だったな」とか「このシーンは何テイク目を使ったのかな」とか、現場の空気が記憶にこびり付いているので、自然と自分の粗探しみたいになるんです。台本を何回も読んで、撮影してるわけですから、たとえ面白い作品だとしても、何が面白くて何が面白くないのか麻痺して分からなくなっていることも多くて。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">作り手側の目線を拭えなくなるわけですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">そうなんです。でも今回はそういうことがなかったんです。あと、台本を読んだ印象と現場の雰囲気で、なんとなく出来上がりが見えたりするんですけど、今回は現場でそれが全く見えなくて、「一体これはどういう作品になるんだろう」って気持ちでした。初めて観た時に、想像がつかなかった部分のギャップにも驚きましたね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">撮影を通して、内容を熟知した上でも、新鮮に楽しめたんですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">話も理解してるつもりでしたけど、ちゃんと理解してなかったんだなって。出来上がりを観て「この映画ってこういう映画だったんだ」って（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">（笑） もちろん、白石珠という役を演じるということで言えば、当然、理解してやっていたと思うんです。ただ、珠以外の人物のシーンも併せてひとつの映画が生まれるわけですから、今の麦ちゃんの言葉は、他の人物のシーンを珠と関連付けていった完成形が想像を超えたものになったという意味だと思います。実は僕の想像も超えた完成形になりましたから。もしかしたら、関わったスタッフとキャスト、みんな同じ思いかもしれない。</span>
+      </div>
+
+    </div>
+
+<div class="inline-image">
+  <img src="images/article004-1.jpg" alt="写真1">
+</div>
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">岸監督は、例えば、絵コンテを描いて撮っていくようなやり方ではありませんよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">絵コンテは描かないですね。この組の暗黙の了解なんですけど、技術スタッフ、美術スタッフ含めて、現場に役者さんを加えて、初めて分かってくることがあるんですよね。想像していたよりもリアルなものが見えてきて、そうなった段階で、付け足したり、排除したりしながら、シーン全体を決めていくので、絵コンテとして、ここで珠のアップ、ここで卓也（菅田将暉）がフレームインしてくる、というように先に決めてしまうと映像を限定してしまうような気がするんです。そうしないためにコンテは作らず、大体どんな感じでいくかは現場で初めて決めて、撮る。だから、即興に近いカット割をしていきます。そういう作り方ですね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">いわゆる長回しでも、あらかじめ構成の設計されたワンシーンワンカットとも違って、カメラを回し続けて、映像素材を撮り溜めていくような感覚に近いと思うんですが、リハーサルもあまりされないんでしょうか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">する時もありますし、無い時もあります。「もう麦ちゃんが役に入ってるな、すぐにやれそうだな」って思えば、すぐにカメラを回します。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">現場で起こっていることを尊重するわけですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">そうですね。</span>
+      </div>
+
+
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">演じる側としては、すごく居心地が良い現場でした。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">門脇さんをこの珠役にキャスティングした決め手を聞かせてください。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">『愛の渦』（三浦大輔監督）を観て、いつかは、と思ってたんですけど、決め手は、「目」でしたね。この作品は尾行シーンが重要なんですけど、尾行は基本的に台詞が無いわけです。表情に複雑な感情が出せる人でなきゃいけない。やっぱり「目」は重要なんで、『愛の渦』でも、その点で感じるものがあったので、麦ちゃんなら出来るだろうなと思いました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">この珠というキャラクターは、自然体の門脇さんが映っているように錯覚するほどでした。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">私は逆に、私じゃない私が映っている気がしたんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">つまりそれは、珠ではあるけど自然体ってことになるのかな？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">結局、自分が思っている自分というのは、その範囲内の自分に過ぎないと思っているので、自分を出そうとする方が逆に自分って出せないと思うんです。現場ではそういう意識を排除しました。もしかしたら本当の私の姿が映ってるかもしれないけど、それは普段、私が気付いてない私の姿だと思うんです。自分の考える範囲を超えた私がいたから新鮮な目で観られたし、作品を客観的に観られたのもそういうことかもしれないです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">自意識からも解放された状態ということですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">そうですね。特に演技をしたみたいな感覚はなかったですね。</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article004-2.jpg" alt="写真2">
+</div>
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">岸監督はこれまで手掛けられた映像作品が高い評価を得ています。監督に対して、どんなイメージを持たれていましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">すごく興味がありましたし、ご一緒したいなと思っていました。私の理想形なんです。どの現場でもどの役柄でもその理想形を常に目指してはいますけど、なかなかその理想形がベースにある現場というか、敢えて口に出さなくてもそれが当たり前に存在する現場ってないので、すごく幸せでしたね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">映画に限らず、ドラマもそうですけど、役者さんの芝居をスタッフがどれだけ集中して、撮影するかだと思うんです。この組のやり方としては、いい芝居を導くために、演出も撮影もアプローチを変えながら、よりリアルな映像を求めていく、ドキュメンタリーを撮る感覚に近いんです。ドキュメンタリーには、何かを記録するって意味もあると思うんですけど、それと同様に、「お芝居を記録していく」という考え方でやっているんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">ドキュメンタリーという部分で言うなら、岸監督は生のものに触れてきた経験が多いと思うので、生のものにしか反応されないんです。芝居では誤摩化せないというか、そんな小賢しいものを要らないんだよ、みたいな（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">撮影中に、そういった監督ならではのセンサーみたいなものは感じました？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">私自身も作り込んだものは好きじゃないので、自分が常に目指しているものにビビッドに反応して下さるので、違和感は無かったんです。お芝居じゃなくて生のものを求めるとなると、自分自身の本物の何かが出てくるってことでしかなくて、残念ながら。もちろん役を通してるので、言葉も感情も完全な素というわけではないんですけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">敢えて言葉で説明すると、そこに居るっていうリアリティが欲しいんです。簡単に言ってしまうと、「あるある」という感覚。そのリアリティを追っていくと、やっぱり実力のある役者さんは、醸し出してくるものがある。それを記録したいんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">珠の感情についてはあまり話し合わず、モヤモヤを抱えたまま演じてもらったのも、リアリティを追求する意図ですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">そうですね。僕は５２歳ですけど、２０代の女性である珠の心理って、正直全部説明しきれないんです。年齢的には麦ちゃんの方が近いわけです。麦ちゃんが理解してることの方が人に伝わるかもしれない。僕はそこにも期待していて、役者さんを放置するところがあるから、大変だったかもしれないですね。</span>
+      </div>
+
+    </div>
+
+<div class="inline-image">
+  <img src="images/article004-3.jpg" alt="写真3">
+</div>
+
+
+
+    <div class="pull-quote">
+      <p>（撮影の）夏海さんの高まりに合わせて自分も高めていく。1人だけのシーンでも夏海さんと芝居してるような感覚がありました。（門脇）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">居酒屋の哲学討論シーンは実際の院生のエキストラとして起用されたとか。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">まず、役の参考にするために、麦ちゃんに事前取材として哲学を専攻する女子学生に会ってもらって、お茶しながら色んな話を聞いてもらいました。居酒屋のシーンは、実際の院生に撮影の２時間前に入ってもらって、お酒を吞んでもらって、それで出来上がった頃に「それじゃあいきましょう」と。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">実際の行程とは逆ですよね。演じるのではなく実際に哲学討論をしてもらって、その中に門脇さん演じる珠が溶け込むという。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">その哲学討論の内容は、難しすぎてわからないんですけど（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">何を話していたか内容を全く覚えてないですね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">だから、撮影中も黙って聞いてました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">それが、劇中の珠の疎外感にも見えますよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">そういうことが功を奏したかもしれないです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">終盤の石坂（長谷川博己）とのホテルのシーンでの珠の独白は、長台詞という意味でも、求めるリアル（芝居掛かっていない状態）との接合が難しかったのではないでしょうか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">特に何も考えてなかったかもしれないです。単純に台詞を覚えて言いました。こういう言い方をするとすごくやる気の無い人みたいですけど（笑） 言葉の力は大きいので、事前に言葉と感情を１から10まできっちり理詰めをして、意味を持たせて喋るよりも、人間の感情なんて１から10まで説明できるものではないので、ただ言葉を紡ぐことによって、湧き起こってこないと思ってた感情が意外と湧き起こってくることがあると思うんです。あれだけの台詞の量で過去を吐露するシーンなので、考えないのが一番なんです（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">あのシーンは撮影の終盤だったので、それまでの蓄積があるし、空っぽにしてやっても、珠という役のブレない軸はもうあったから、勇気を持って頭を真っ白にしました。「考える」ということは安心材料になってしまうので。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">それは、門脇さんの中に、元々あった演技指針なんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">不器用なので、考えると自意識みたいなものばっかりが湧いてきてしまって、良い事がないので、考えないのが一番なんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">その境地に至るって簡単ではない気がします。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">才能だと思います。僕が思う実力派の俳優さんって、そういう領域にいる人。きっと演技をやったことがない人には理解出来ない感覚があると思うんです。役を生きているというか、そこに居てもらうというような注文を演出家がした時に、それを出来る人はそうはいない。僕はそういう芝居を撮ることが仕事だと思っているので、この作品は麦ちゃんをキャスティングした時点で9割終わってるようなものでした。</span>
+      </div>
+
+    </div>
+
+<div class="inline-image">
+  <img src="images/article004-4.jpg" alt="写真4">
+</div>
+
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">門脇さん以外のキャストも真に迫っていて素晴らしかったですが、中でも珠と卓也との距離感がとても自然でした。すれ違う珠と卓也（菅田将揮）が部屋でカップラーメンを食べるシーンが印象的でした。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">菅田さんは共通の知り合いも沢山いて、顔合わせで会った瞬間に合うだろうなって直感がなんとなくあったので、あとは２人でいることに気持ち悪さを感じないテンションを計れればいいなって思っていました。卓也とのシーンは、初日から２日間で撮り切りでしたけど、２人で居る時の空気感について、そんなに探り探りみたいにはならなくてすごくやりやすかったですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">あのシーンは、珠と卓也に別れが訪れる重要なシーンで、それもカップラーメンをすすりながら、互いの感情を受け止めなきゃならない。ある程度、カットの計算はしていたんですけど、菅田君もそうですけど、実力派は超えちゃうんですよ、僕の想像なんて。とにかく、二人が作る空気感を大切にしたいと思って。本当は度量が狭い男なんですけど、度量が広いフリをしながら、「今のいいね」って見ていた。結果として、テイクによって微妙に違った芝居になっていて、ラーメンのすすり方とか毎回違うわけです。おかげで編集は大変でしたけど（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">そういう意味では、繋がりというのは一切、無視しましたね。前後関係は気にしないで、とにかくそこに居るようにしました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">カメラの存在も意識しなくなるくらいに？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">そうですね。いや、でも逆に意識したのかもしれない。意識するというか、撮影の夏海（光造）さんのカメラが気がつくと顔の横にあったり、岸監督が顔に寄ってと指示してるのに、私が手を動かしていたら手にズームしたりするんです。夏海さんには夏海さんの撮影のリズムや呼吸みたいなものがあって、それが分かってくると、夏海さんの高まりに合わせて自分も高めていくというか、1人だけのシーンでもいつも夏海さんと芝居してるような感覚がありました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">凄い。それは、面白い感覚ですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">門脇：</span>
+        <span class="qa-text">そういう感覚は、初めての経験でした。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">岸：</span>
+        <span class="qa-text">僕も色んな役者の方々と仕事をしているんですけど、カメラマンと芝居をしているという感覚は希有だと思います。</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="index.html" class="back-link">← BACK TO LIST</a>
+  </footer>
+
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
