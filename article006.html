@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>松田龍平 × 山下敦弘監督 インタビュー — SUB POKKE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1a17;
+      --ink-mid: #4a4640;
+      --ink-light: #8a8278;
+      --paper: #faf8f4;
+      --warm: #f0ebe0;
+      --header-bg: #ffffff;
+      --accent: #5a4a3a;
+      --rule: #d8d0c0;
+      --serif: 'EB Garamond', 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+    header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .site-logo-wrap { display: flex; align-items: center; gap: 0.8rem; }
+    .site-logo { text-decoration: none; display: flex; align-items: center; }
+    .site-logo img { height: 28px; width: auto; display: block; }
+    .site-archives { font-family: var(--serif); font-style: italic; font-size: 0.88rem; color: var(--ink-light); letter-spacing: 0.12em; align-self: flex-end; line-height: 1; padding-bottom: 2px; margin-left: 0.5rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--ink-mid); font-weight: 400; transition: color 0.2s; }
+    nav a:hover { color: var(--ink); }
+
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+    .article-header { margin-bottom: 3rem; animation: fadeUp 0.6s ease both; position: relative; z-index: 1; }
+    .article-category { display: inline-block; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--ink-light); text-transform: uppercase; border-bottom: 2px solid #00aacc; padding-bottom: 0.2rem; margin-bottom: 1.5rem; font-weight: 400; }
+    .article-work-title { font-family: var(--serif); font-size: clamp(1.0rem, 2.5vw, 1.3rem); font-weight: 400; line-height: 1.5; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 0.4rem; }
+    .article-title { font-family: var(--sans); font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; line-height: 1.6; letter-spacing: 0.03em; margin-bottom: 1.5rem; }
+    .article-subtitle { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .article-meta span { font-size: 0.7rem !important; letter-spacing: 0.12em; color: var(--ink-light); font-weight: 500 !important; font-family: var(--sans) !important; }
+    .article-meta > span { color: var(--ink); font-weight: 500; }
+    .article-meta .meta-right { display: flex; gap: 1.5rem; }
+    .meta-divider { width: 1px; height: 12px; background: var(--rule); }
+
+    .hero-image { margin: 1rem 0; animation: fadeUp 0.7s 0.1s ease both; }
+    .hero-image .img-placeholder { width: 100%; aspect-ratio: 780/468; background: linear-gradient(135deg, #d8d0c0 0%, #c8bfae 50%, #b8b0a0 100%); display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; height: auto; display: block; max-width: 780px; }
+    .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
+
+    .article-body { animation: fadeUp 0.7s 0.2s ease both; }
+    .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 300; }
+    .article-intro-wrap { position: relative; padding-left: 1.6rem; margin-bottom: 2.5rem; }
+    .article-intro-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #1c1a17; }
+    .article-intro-wrap::after { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 5px; background: #1c1a17; }
+    .article-intro { font-size: 0.98rem !important; color: var(--ink-mid) !important; }
+    .article-subheading { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.05em; margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+
+    .qa-block { margin: 2rem 0; }
+    .qa-q { margin-bottom: 0.8rem; }
+    .qa-q .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: var(--ink); }
+    .qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
+    .qa-a { display: flex; gap: 0.3rem; align-items: baseline; }
+    .qa-label { font-size: 0.95rem; font-weight: 500; color: var(--ink); flex-shrink: 0; }
+    .qa-a .qa-text { font-size: 0.95rem; font-weight: 300; line-height: 2.0; color: var(--ink); }
+
+    .inline-image { margin: 3rem auto; width: 100%; max-width: 750px; display: block; }
+    .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
+    .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
+
+    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
+    .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
+
+    .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { background: var(--warm); border-color: var(--ink-mid); }
+
+    .article-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .article-nav a { background: var(--paper); padding: 1.5rem; text-decoration: none; color: var(--ink); transition: background 0.2s; }
+    .article-nav a:hover { background: var(--warm); }
+    .nav-direction { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--ink-light); display: block; margin-bottom: 0.5rem; }
+    .nav-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; }
+    .nav-next { text-align: right; }
+
+    .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
+    .back-link:hover { background: var(--ink); color: var(--paper); }
+
+    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-decoration: none; }
+    .footer-logo span { font-style: italic; opacity: 0.6; }
+    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .ph-icon { opacity: 0.25; }
+
+    @media (max-width: 640px) {
+      .article-wrap { padding: 2.5rem 1.2rem 4rem; }
+      .inline-image { margin: 2.5rem auto; }
+      .article-nav { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-logo-wrap">
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">ARCHIVES</span>
+
+  </div>
+</header>
+
+
+<article class="article-wrap">
+
+  <!-- ヒーロー画像（タイトルの上） -->
+  <div class="hero-image">
+    <img src="images/article006-hero.jpg" alt="記事ヘッダー画像">
+  </div>
+
+  <!-- 記事タイトル・メタ情報 -->
+  <div class="article-header">
+    <span class="article-category">Interview</span>
+    <p class="article-work-title">『ぼくのおじさん』</p>
+    <h1 class="article-title">松田龍平 × 山下敦弘監督 インタビュー</h1>
+    <div class="article-meta">
+      <span>2016.10.21</span>
+      <div class="meta-right">
+        <span>撮影 朝岡英輔</span>
+        <span>取材・文 川端哲生</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="article-body">
+
+    <div class="article-intro-wrap"><p class="article-intro">　北杜夫の児童文学の名作を映画化した山下敦弘監督の最新作『ぼくのおじさん』が11月３日より公開される。現在公開中の監督作品『オーバー・フェンス』と奇しくも同時期に発表されるものの異なる味わいを持つ本作は、市井の人々の悲喜交々を生々しく描いてきた山下流喜劇の必ずしも延長線上にない昭和的な懐かしさを備える心和むホームコメディ。甥っ子の小学生、雪男の目線で描かれる、偏屈だけどチャーミングで憎めない主人公の"おじさん"を演じるのが、言わずと知れた映画俳優、松田龍平。ハワイロケを敢行し、年端の離れた凸凹コンビのロードムービーに展開する本作について、２人に話を聞いた。</p></div>
+
+    <div class="pull-quote">
+      <p>龍平君の纏ってる空気感を活かせる直感はあったので、"おじさん"はこんな人だから、みたいなことは言わないようにしました。（山下）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">山下監督が描いてきた「喜劇」と少しテイストが違うこの独特な世界観は、龍平さん演じる“おじさん”の造形に支えられていると思います。この“おじさん”をどう作り込んでいきましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">イメージとしては、（甥の）雪男の目線で語られる“おじさん”というか、雪男の書く作文の中の“おじさん”。だから、コミカルにやり過ぎるくらいのことがあってもいいのかなって気持ちでした。自分なりのおじさん感っていうことだと思うんですけど、おじさんを…、そう、おじさんを意識するみたいな…（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">言っても、龍平君はまだ若いしね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">まだ33歳なので。もちろん、若い子からしたら、十分おじさんなんですけど。だから、自分が感じるおじさんを求め続けたというか…（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">作り込むみたいなことではなく、何て言ったらいいんだろう、普段の龍平君の纏ってる空気感を活かせる直感はあったので、“おじさん”はこんな人だから、みたいなことは言わないようにしました。龍平君も言った通り、子供の目から見た“おじさん”を描いた映画なので、やるべきことはもう脚本に書いてあって、原作の北杜夫さんの味をどう汲むかってことがまず大事で、最初はそのハードルが高かった。ある種の特殊な世界観じゃないですか。起こっている出来事は現実的で、ファンタジーと割り切れるほどにはファンタジーに寄っていないファンタジーというか。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">全てのキャストの方々に言えると思うんですけど、「誇張した芝居」を「自然体で演じる」というような、言葉としては矛盾するんですけど、そのさじ加減が絶妙で。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">コミカルにやろうって気持ちで自分はいたけど、山下さんが撮ることでバランスが取れるというか、山下さんだったら、人間臭くないキャラクターもちゃんと人間臭く撮ってくれるだろうなって、安心感はあったんです。山下さんは人間を生々しく撮る監督だと思うので、この映画はそれに一番遠いところをやってるのかなって気はしました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">本来、こういう世界観って舞台向きだと思うんですね。舞台という空間では成立しやすいんだけど、映画となるとまたちょっと違うから難しい。原作の時代設定にしてもそうで、１ドルが360円だった頃、ハワイ旅行が夢の時代の話なわけだから。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">映画の設定は、現代の話に書き換えられていますよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">そうですね。一応、現代にしてるんですけど、その線引きも自分の中では強く拘っていなかったんです。「アメリカ製のお人形がいいわ」って台詞がある時点でもう悟ってました（笑）自ずと醸し出されるノスタルジーはあるだろうと予想してたところはあって、それでも、このスタッフと俳優さん達で作る意味がある。原作の時代を知っている世代の、例えば、山田洋次監督が撮ったとしたら、また違った映画になると思うし、これを僕らの世代が撮ることで僕らのオリジナルな部分は出ると信じていました。</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article006-1.jpg" alt="写真1">
+</div>
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">美術や照明にも狙った時代感があって、例えば、“おじさん”とエリー（真木よう子）が初対面する場面は、敢えてあからさまな紋切り型でそれが一層、笑いを誘います。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">“おじさん”の脳内オーケストラが鳴ってる（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">山下さん、こういうことするんだって。チャレンジしてるなって（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">でも一目惚れってああいうことですよ。この世界における一目惚れってあれしかない。出会い頭にぶつかって、パッと見たらマドンナがいたっていう状況の演出と言えば、あれしか選択肢はないです（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">そのような演出を「山下敦弘」がしていることも、それを「松田龍平」が演じていることも、新鮮でした。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">そうですね。チャレンジの連続でしたよ。自分達の記憶を探りながら、いい意味で型に嵌めていくというか、今これをやることでズレも生じるだろうし、だからこそやる意味については自覚的でした。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">それが見事に作品性になっていますよね。龍平さんは山下監督の映画に対して、どんな印象を持っていましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">もちろん好きでした。作品によってそれぞれ違うと思うんですけど、登場人物に説得力がありますよね。ちゃんとそこに存在してる。今回の脚本を最初に読んだ時は、まだ分からなかったですね。山下さん頼みなところが大きくて、とりあえず一回話を聞いてみようとは思いました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">それは期待に近い気持ちだったんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">いや、少し読んで一旦置く感じでした。これは何だろう？って（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">一方、こっちでも、龍平君、これをどうやるんだろう？って（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">お互いに距離の離れた場所で思っていたんですね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">それで山下さんに一回会って話をして、気になるポイントについて「一体どうやるんですか？」みたいな話をしたんですけど、山下さんも「いや、分かんないだよね。とりあえずやってみようと思ってる」って（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">（笑）まあでも、龍平君より先にオーディションで色んな子供達に会っていたから、雪男の芝居を見ていく中で、吟味じゃないですけど、なんとなく掴んではいたんです。いきなり「よーいドン！」では出来ない世界観だと思っていたので、北さんの世界観に体を慣らしていくような作業を僕はしていたので、どちらかと言うと、龍平君の方が不安だっただろうなと思う。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">不安はありましたね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">そう、龍平君は衣装合わせとか、僅かな時間の中で徐々に掴んでいったんだと思うんだけど、相当難しかったと思いますね。それこそ現場で「これ、いつの時代なんですか？」って龍平君に聞かれたら、たぶん答えられなくて撮影止まってたと思う（笑）</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article006-2.jpg" alt="写真2">
+</div>
+
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">小学生の雪男とのやり取りで、“おじさん”の子供っぽさが逆に引き立つ、ある種のバディムービーだと思うんです。凸凹なコントラストを際立たせる相棒である雪男役の大西利空君との呼吸はいかがでした？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">利空はクランクイン前から台本が全て頭に入っていたので、とにかくもうブレなかったですね。きっちりした芝居をやってくれました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">最初から最後まで芝居に関してはブレなかったですよね。あと、現場の雰囲気が利空中心で進んでいったので、それに巻き込まれながら、「もっとやれ、もっとやれ」って盛り立ててました（笑）利空も最初はちゃんとしてたけど、割と速い段階でいい意味で緩んできたと思います。現場でたまに寝ちゃったり、撮る直前まで遊んでいたり（笑）でも、芝居に入るとちゃんと雪男なんです。何より、スタッフ皆が利空に首ったけでした。それで、ハッと気付いちゃったんですよ。「あれ？誰も自分のこと見てないな」って（笑）山下さんもほとんど演出するのは利空だし、完全に彼が中心なんです。カメラが回るギリギリまで自由に遊んでいるから、皆がそれに引っ張られるんですよね。子供がいることで出来上がる特有の温度感に現場全体が包まれながら撮影してたから、それがこの映画の色になってるのかなって思いますね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">それは絶対あるね。あと、この映画を一番信じてたのが、もしかしたら利空だったんじゃないかな。僕らは気を抜くとブレちゃうんだけど、「僕の準備した芝居はこういうことですよ」っていう妙に揺るがない自信で、利空が引っ張ってくれたおかげはある。オーディションから参加して、台本も読み込んでくれて、事前にイメージしていたものがあるんだと思うんです。雪男のベースだけは現場にあったので、自然とそれが軸になった。ああいう空気感は初めてでしたね。利空がこの映画の完成を一番楽しみにしているんですよ。クランクアップの時は大泣きでしたから。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">クランクアップ直後、涙ぐむ利空君を龍平さんがハグしたそうですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">アップする３、４日前くらいから既に様子が変だった。飯食べてたら急に泣き出して、それを見た龍平君が優しく「大丈夫」って。それを見て僕はキュンときましたけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">最後に。映画の本筋ではないですが、“おじさん”、雪男、エリーの３人が高台の丘からパールハーバーを眺めるハワイでのシーンがあります。殊更にやらず、サラリと問題提起しているところが山下監督らしいと思いました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">原作には、移民の話やパールハーバーについての話が重要な形で出てくるんですけど、どういう描き方をするかは悩んだんです。二転三転あって、軍事施設を見に行くという件りは許可がおりなかったんですけど、絶対にパールハーバーについてはやらなければいけないと決めていて、僕らが出した答えがあのシーンなんです。パールハーバーって、現地では施設を見て回れるようになっていて、テーマパーク化しているらしいんです。だけど、僕達にはそういう印象がない。零戦が攻めてきたように聞こえる飛行機の音を足そうとも考えたけど、いや、そういうことではないと思って止めました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">ここでの“おじさん”の立ち姿や口調も心なしか毅然として見えました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">“おじさん”は何も変わってないです。エリーのことしか考えてない。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">はははは（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">松田：</span>
+        <span class="qa-text">エリーのことしか考えてないけど、でもほんの少しだけ、雪男が隣で見てるということは意識してる。“おじさん”自身は大学の講師だから詳しいと思うんです。でも、“おじさん”の本心を言ったら、エリーのことだけというか、大事なのは「エリーさんがこっちを見てる」ってところでしかないはずだから、変に重さというか、特別な何かは要らない。歴史を知らないかもしれない雪男が隣にいる。ほんの少しその気持ちがあるだけなんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">山下：</span>
+        <span class="qa-text">シーンのカット尻は長くしているんです。平和な住宅街から３人がパールハーバーをただ眺めるだけのなんてことないシーンで、最初に見た人は流してしまうかもしれないけど、意味は含まれている気はします。</span>
+      </div>
+
+    </div>
+
+<div class="inline-image">
+  <img src="images/article006-3.jpg" alt="写真3">
+</div>
+
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="index.html" class="back-link">← BACK TO LIST</a>
+  </footer>
+
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
