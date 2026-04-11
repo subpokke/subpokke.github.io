@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杉咲花 × 中野量太監督 インタビュー — SUB POKKE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1a17;
+      --ink-mid: #4a4640;
+      --ink-light: #8a8278;
+      --paper: #faf8f4;
+      --warm: #f0ebe0;
+      --header-bg: #ffffff;
+      --accent: #5a4a3a;
+      --rule: #d8d0c0;
+      --serif: 'EB Garamond', 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+    header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .site-logo-wrap { display: flex; align-items: center; gap: 0.8rem; }
+    .site-logo { text-decoration: none; display: flex; align-items: center; }
+    .site-logo img { height: 28px; width: auto; display: block; }
+    .site-archives { font-family: var(--serif); font-style: italic; font-size: 0.88rem; color: var(--ink-light); letter-spacing: 0.12em; align-self: flex-end; line-height: 1; padding-bottom: 2px; margin-left: 0.5rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--ink-mid); font-weight: 400; transition: color 0.2s; }
+    nav a:hover { color: var(--ink); }
+
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+    .article-header { margin-bottom: 3rem; animation: fadeUp 0.6s ease both; position: relative; z-index: 1; }
+    .article-category { display: inline-block; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--ink-light); text-transform: uppercase; border-bottom: 2px solid #00aacc; padding-bottom: 0.2rem; margin-bottom: 1.5rem; font-weight: 400; }
+    .article-work-title { font-family: var(--serif); font-size: clamp(1.0rem, 2.5vw, 1.3rem); font-weight: 400; line-height: 1.5; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 0.4rem; }
+    .article-title { font-family: var(--sans); font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; line-height: 1.6; letter-spacing: 0.03em; margin-bottom: 1.5rem; }
+    .article-subtitle { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .article-meta span { font-size: 0.7rem !important; letter-spacing: 0.12em; color: var(--ink-light); font-weight: 500 !important; font-family: var(--sans) !important; }
+    .article-meta > span { color: var(--ink); font-weight: 500; }
+    .article-meta .meta-right { display: flex; gap: 1.5rem; }
+    .meta-divider { width: 1px; height: 12px; background: var(--rule); }
+
+    .hero-image { margin: 1rem 0; animation: fadeUp 0.7s 0.1s ease both; }
+    .hero-image .img-placeholder { width: 100%; aspect-ratio: 780/468; background: linear-gradient(135deg, #d8d0c0 0%, #c8bfae 50%, #b8b0a0 100%); display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; height: auto; display: block; max-width: 780px; }
+    .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
+
+    .article-body { animation: fadeUp 0.7s 0.2s ease both; }
+    .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 300; }
+    .article-intro-wrap { position: relative; padding-left: 1.6rem; margin-bottom: 2.5rem; }
+    .article-intro-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #1c1a17; }
+    .article-intro-wrap::after { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 5px; background: #1c1a17; }
+    .article-intro { font-size: 0.98rem !important; color: var(--ink-mid) !important; }
+    .article-subheading { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.05em; margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+
+    .qa-block { margin: 2rem 0; }
+    .qa-q { margin-bottom: 0.8rem; }
+    .qa-q .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: var(--ink); }
+    .qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
+    .qa-a { display: flex; gap: 0.3rem; align-items: baseline; }
+    .qa-label { font-size: 0.95rem; font-weight: 500; color: var(--ink); flex-shrink: 0; }
+    .qa-a .qa-text { font-size: 0.95rem; font-weight: 300; line-height: 2.0; color: var(--ink); }
+
+    .inline-image { margin: 3rem auto; width: 100%; max-width: 750px; display: block; }
+    .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
+    .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
+
+    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
+    .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
+
+    .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { background: var(--warm); border-color: var(--ink-mid); }
+
+    .article-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .article-nav a { background: var(--paper); padding: 1.5rem; text-decoration: none; color: var(--ink); transition: background 0.2s; }
+    .article-nav a:hover { background: var(--warm); }
+    .nav-direction { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--ink-light); display: block; margin-bottom: 0.5rem; }
+    .nav-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; }
+    .nav-next { text-align: right; }
+
+    .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
+    .back-link:hover { background: var(--ink); color: var(--paper); }
+
+    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-decoration: none; }
+    .footer-logo span { font-style: italic; opacity: 0.6; }
+    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .ph-icon { opacity: 0.25; }
+
+    @media (max-width: 640px) {
+      .article-wrap { padding: 2.5rem 1.2rem 4rem; }
+      .inline-image { margin: 2.5rem auto; }
+      .article-nav { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-logo-wrap">
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">ARCHIVES</span>
+
+  </div>
+</header>
+
+
+<article class="article-wrap">
+
+  <!-- ヒーロー画像（タイトルの上） -->
+  <div class="hero-image">
+    <img src="images/article005-hero.jpg" alt="記事ヘッダー画像">
+  </div>
+
+  <!-- 記事タイトル・メタ情報 -->
+  <div class="article-header">
+    <span class="article-category">Interview</span>
+    <p class="article-work-title">『湯を沸かすほどの熱い愛』</p>
+    <h1 class="article-title">杉咲花 × 中野量太監督 インタビュー</h1>
+    <div class="article-meta">
+      <span>2016.10.21</span>
+      <div class="meta-right">
+        <span>撮影 朝岡英輔</span>
+        <span>取材・文 川端哲生</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="article-body">
+
+    <div class="article-intro-wrap"><p class="article-intro">　綿密な構成による脚本と「人間らしさ」に拘る演出で一貫して家族を描き、前作はベルリン国際映画祭に正式招待された中野量太監督。完全オリジナルによる新作にして、商業映画第一作となる『湯を沸かすほどの熱い愛』は、余命幾ばくもない母親が、家族のためにやり残したことを強い意志で敢行していく無償の愛の物語。どんな状況にも屈しない人間味ある母親、双葉（宮沢りえ）と向き合いながら、たくましく成長していく娘、安澄役を務めるのが、実力派若手女優、杉咲花。物語を引っ張っていく難しい役柄をいかにして体現していったのか、彼女自身と中野監督に話を聞いた。</p></div>
+
+    <div class="pull-quote">
+      <p>俳優、女優に求めるものを「感度」という言い方を僕はするんですけど、その感度がまぁ豊かなんですよ。（中野）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">この映画は、双葉と向かい合う安澄の成長物語でもあるように感じました。杉咲さんが安澄を演じることで、それが色濃くなったんじゃないでしょうか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">この映画で唯一、当て書きをしたのが、安澄なんです。もちろん、双葉（宮沢りえ）が主役ではあるんですけど、「残された人がどう生きるか」が常に僕の映画のテーマであるので、今回、残される側の中心となる安澄が成長するシーンはどうしても撮りたくて、この役に相応しいのは誰だろうと考えた時に浮かんだのが、花でした。実は２年前くらいから一緒にやりたいと思っていたんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">それは杉咲さんの出演作品を観て、感じたんでしょうか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">CMか何かでほんの些細な瞬間を見てのことなんです。俳優、女優に求めるものを「感度」という言い方を僕はするんですけど、その感度がまぁ豊かなんですよ。ほんの一瞬、見ただけですぐにそれは分かって。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">ちょっと恥ずかしいです（笑）自分では分からないので。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">あるんですよ、自覚していないだけで。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">日常で、深く深く考えてまうところはあります。例えば、母親と喧嘩してる時に、ふと我に返って、今、自分はこんな顔をしてる気がすると思ったり、集中して映画を観てる時に、集中して映画を観てるなって思う自分がいるんです。それが邪魔して、逆に集中して観られなくなったり。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">常に俯瞰してるというのは、感受性が豊かなんでしょうね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">安澄って難しい役だと思うんですけど、杉咲花でやると決めてから、書けたところはあるんです。とか言いながら、一回も会ったことはなかったんですけど（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">初めて会ったのは、本読みや衣装合わせになるんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">それが違うんです。オファーを出して、出演OKの返事は貰っていたんですけど、まだ会ってはいなくて、いつ会えるかなと思っていた頃に、ちょうど『トイレのピエタ』（松永大司監督）の試写があって、個人的に足を運んでいたんです。試写室の席に座っていたら、前から花が現れて（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">こんなところで会ってしまったと焦りつつ、なるほど、こんな感じか、と思ったりもしながら（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">私は中野監督の映画ということを知らなかったんです。宮沢りえさんの主演映画としかまだ聞いてなくて。脚本も頂いていなかったので。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">ご挨拶した方がいいのかなとか考えを巡らせていたら、偶然にも僕の席の隣に座ったんです。これは不味いと思って、その場で声を掛けるべきか、プロデューサーの深瀬さんに相談のメールをしたんです。そしたら、「怪しい人にならないように気をつけて下さい」って返信がきて（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">そうだったんですね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">それで話し掛けたら、「え？」みたいな表情で。たぶん変なおじさんと思われたんじゃないかな。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">いや、いや（笑）そんなことはないと思います。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">私は映画のタイトルも聞いていなかったので、「『湯を沸かすほどの熱い愛』の中野です」と言われてもすぐに分からなかったんです。監督の代表作をおっしゃったのかと思って、申し訳ないけど分からない、どうしようって。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">話してる途中で、「もしかして、宮沢りえさんの出演映画ですか？」って気付いてくれたんです。それでもまだ、監督じゃなくて、関係者の誰かと思ってたでしょ？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">そんなことはないです。だって、酷いんですよ。まだ脚本を読む前だったのに、そこで映画の結末を言われてしまったんです。それには本当にビックリでした（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">ごめんなさい（笑）もう全部読んでくれているものだと思っていたから。そんな感じの出会いでした。</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article005-1.jpg" alt="写真1">
+</div>
+
+
+    <div class="pull-quote">
+      <p>「家族に見えるように、家族になって欲しい」と言って頂いて、私にはそのやり方はすごく向いていると思いました。（杉咲）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">脚本を読んでみて、自身が演じる安澄にどんな印象を持ちました？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">当て書きをして下さったと聞いて、私は自分の中にあるものだけで演じようとしていたんですよ。それで初めて本読みをした時に、少し違ったみたいで。最初は強すぎたんです。お母ちゃんとの喧嘩のシーンでも、力任せにやり返すみたいなことをしていて、監督から「安澄はもっと弱いから、そうじゃないよ」って言ってもらったのを覚えています。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">今回、花だけ事前リハーサルを何回もやって、僕はプレッシャーをかけていたんです。この映画の要は安澄だからって。プラス、僕もこの映画は安澄をちゃんと構築出来れば、他はみんな着いてくると確信していたので。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">安澄を立体的にするためのブレない軸は何でしたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">ちゃんと親子の関係性に見えること。親子なら親子、姉妹なら姉妹に見せるのではなく、見えるところまで持っていきたかったんです。妹の鮎子役の伊東蒼ちゃんは、そこまで演技経験のある子ではなかったので、初日からシリアスな病院のシーンという中、待ち時間も花が蒼の手をずっと握ってくれていました。確か、現場に入る前からコンタクトしてくれてたんだよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">連絡はずっと取り合っていました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">鮎子役の伊東蒼さんと事前に関係性を深めようと意識したんですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">蒼は周囲にとても気を使うし、遠慮がちな女の子で、私自身もひとりっ子で妹がいないので、歳が下の子と仲良くなれるかなって不安があったんです。でも鮎子とはちゃんと繋がっていたいと思ったので、どうしたらいいか私なりにいつも考えていました。写真を１日１回ずつメールで送り合う約束を監督としていたんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">それは宮沢さんも含めて、必ず毎日メールをし合うと決めました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">だから、蒼とは毎日、変顔を送り合ってました（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">なるほど（笑）そういった役作りの経験はこれまでありましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">初めての経験でした。「家族に見えるように、家族になって欲しい」と言って頂いて、私にはそのやり方はすごく向いていると思いました。そのおかげで現場の居心地が良かったんだなって振り返ると改めて思います。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">そういうことを花を中心にしてやって欲しいと思っていたんです。それに100％に近く応えてくれたと思います。長い撮影の中で、宮沢さんが花に引っ張られたシーンもありましたから。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">冒頭の安澄の成長物語という話に繋がるんですが、安澄が最初に乗り越えるものにいじめがありますよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">いじめっ子役の３人とは、初日から距離を置いて話さない関係に自然となっていました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">いじめのシーンについては、いじめる側の３人の演出を集中的にしましたね。３人にはずっと一緒に行動するように求めました。いじめではなくて、嫌がらせの延長がいじめに見えるようにして欲しい、と。「This is いじめ」にならないようにという言い方をしていました。それは噓臭くなるからなんです。いじめって、ちょっとした悪意の重なりがいじめに発展してると思うので。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">安澄が絵の具でのいじめを受けた後に、双葉が呼び出されて保健室にやってくるシーン。ここの２人の表情のカットバックが素晴らしくて。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">実はあのシーンが、宮沢さんが花に引っ張られたと思うシーンなんです。ここから宮沢さんは花に一目置くようになったんじゃないかな。花を認めたという言い方は変ですけど、あのシーンで、宮沢さんは本当の母と子の関係を築けると感じたと思うんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">このシーンを演じきらないと、この映画は成功しないって私は思っていたんです。だからすごく緊張してました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">あのシーンで、どんなことがあっても救おうとする母と子の関係性に観ている人をグッとさせられたら、と思っていたんですよ。そうすれば、それ以降はどんな事件が起きても感情移入してしまうはずだと思ったから、そこまでが勝負だよって言い続けていたんです。それもあって、かなりテイクを重ねたシーンになりました。</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article005-2.jpg" alt="写真2">
+</div>
+
+    <div class="pull-quote">
+      <p>宮沢さんのカットを撮っている時に、おそらく、カメラには映っていない花の芝居が宮沢さんには刺さっていたんです。（中野）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">双葉、安澄、鮎子の３人は車で旅をすることになります。静岡ロケだったそうですが、ロケを通じて、関係性に深まりは感じましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">何気ないことなんですけど、ドライブインで拓海（松坂桃季）と３人が別れるシーンで、双葉の「走ると滑るよ〜！」って台本に無い台詞に対して、安澄と鮎子が同時に「は〜い！」って言うんです。それを見た時にいいなって思って。宮沢さんが自然に言った言葉に、２人が同時に答えられるような関係性になっていたから。前半の撮影を経て、安澄と鮎子の２人はいい関係性になっていましたね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">前半は栃木でのロケが多くて、栃木のホテルに泊まっていたんですけど、基本的に蒼と一緒に寝てました。それぞれに部屋は用意されてたんですけど。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">旅を通じて、双葉と安澄の関係は大きな岐路を迎えますが、あらためて、宮沢さんとのお芝居について聞いてもいいですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">クランクインする前に、お母ちゃんが…</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">宮沢さんは、今でもまだお母ちゃんなんですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">はい。今になって、何て呼べばいいか分からなくて（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">お母ちゃんのままで大丈夫です。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">常に「どれだけ時間が掛かってもいいから、気にしないで」って言って下さったんですよ。お母ちゃんにそう言ってもらえたことで、宮沢りえさんとご一緒することへの緊張感が一切無くなったんです。お母ちゃんは自分が映ってない時も本番と同じお芝居をして下さるんです。それは、簡単なことではないと思っていて、それに救われました。さっきの保健室の絵の具のシーンも何回も撮ったんですけど、お母ちゃんがずっと同じ表情をしてくれて。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">２人の表情をそれぞれ別で撮る必要があるからですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">そうなんです。まだ自分のカットを撮っていない時に、相手のためにお芝居をして、自分のカットを撮る時に同じように出来なかったらどうしようって私なら思うし、それでも何度もやって下さるのが本当に有り難かったですし、私も相手のためにそうしたいって思わせてくれました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">そういう意味では、２人が完全に呼応し合ってると思った最高峰が、港のシーンでした。それぞれワンテイクずつで終わってはいるんですけど、映っていない時も相手を受ける芝居をして欲しいとお願いしていたんですね。宮沢さんと後日話す機会があったんですけど、「あんな顔をされたら、私はあの芝居をするしかない」って。宮沢さんのカットを撮っている時に、おそらく、カメラには映っていない花の芝居が宮沢さんには刺さっていたんです。だから、僕が求めることが花は出来ていたってことだと思います。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">杉咲：</span>
+        <span class="qa-text">ありがとうございます。</span>
+      </div>
+
+    </div>
+
+
+<div class="inline-image">
+  <img src="images/article005-3.jpg" alt="写真3">
+</div>
+
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">この映画は脚本が本当に巧みで唸らされるんですけど、それだけではなく、血の通った人間が生きていると感じるからこそ胸を打たれます。中野監督の映画に共通している「ウェルメイド」では終わらせない、その神髄はどこにあるんでしょうか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">中野：</span>
+        <span class="qa-text">たった1人のキャラクターを作ることなんです。安澄という人間は1人しかいない。安澄という人間の感情表現は１つしかない。僕はそういう言い方をしているんですけど、たった1人の唯一無二の人間を作って、その人らしさを表現したら、それに観客は感動してくれるはずなんです。僕らが何に感動するかって、人間としてのその人らしさだと思うので。例えば、安澄が教室である姿になって訴えるシーンでは、普段は絶対に出来ない子がそれでも懸命にやることに重みがある。平気で出来る子では駄目なんです。それを汲んだ芝居を花がちゃんとしてくれたことで、それが安澄らしさになる。全シーン、そういう細部に拘りましたし、花はそれに応えてくれたと思います。</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="index.html" class="back-link">← BACK TO LIST</a>
+  </footer>
+
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
