@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>青木崇高 × 半野喜弘監督 インタビュー — SUB POKKE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1a17;
+      --ink-mid: #4a4640;
+      --ink-light: #8a8278;
+      --paper: #faf8f4;
+      --warm: #f0ebe0;
+      --header-bg: #ffffff;
+      --accent: #5a4a3a;
+      --rule: #d8d0c0;
+      --serif: 'EB Garamond', 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+    header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .site-logo-wrap { display: flex; align-items: center; gap: 0.8rem; }
+    .site-logo { text-decoration: none; display: flex; align-items: center; }
+    .site-logo img { height: 28px; width: auto; display: block; }
+    .site-archives { font-family: var(--serif); font-style: italic; font-size: 0.88rem; color: var(--ink-light); letter-spacing: 0.12em; align-self: flex-end; line-height: 1; padding-bottom: 2px; margin-left: 0.5rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--ink-mid); font-weight: 400; transition: color 0.2s; }
+    nav a:hover { color: var(--ink); }
+
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+    .article-header { margin-bottom: 3rem; animation: fadeUp 0.6s ease both; position: relative; z-index: 1; }
+    .article-category { display: inline-block; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--ink-light); text-transform: uppercase; border-bottom: 2px solid #00aacc; padding-bottom: 0.2rem; margin-bottom: 1.5rem; font-weight: 400; }
+    .article-work-title { font-family: var(--serif); font-size: clamp(1.0rem, 2.5vw, 1.3rem); font-weight: 400; line-height: 1.5; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 0.4rem; }
+    .article-title { font-family: var(--sans); font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; line-height: 1.6; letter-spacing: 0.03em; margin-bottom: 1.5rem; }
+    .article-subtitle { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .article-meta span { font-size: 0.7rem !important; letter-spacing: 0.12em; color: var(--ink-light); font-weight: 500 !important; font-family: var(--sans) !important; }
+    .article-meta > span { color: var(--ink); font-weight: 500; }
+    .article-meta .meta-right { display: flex; gap: 1.5rem; }
+    .meta-divider { width: 1px; height: 12px; background: var(--rule); }
+
+    .hero-image { margin: 1rem 0; animation: fadeUp 0.7s 0.1s ease both; }
+    .hero-image .img-placeholder { width: 100%; aspect-ratio: 780/468; background: linear-gradient(135deg, #d8d0c0 0%, #c8bfae 50%, #b8b0a0 100%); display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; height: auto; display: block; max-width: 780px; }
+    .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
+
+    .article-body { animation: fadeUp 0.7s 0.2s ease both; }
+    .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 300; }
+    .article-intro-wrap { position: relative; padding-left: 1.6rem; margin-bottom: 2.5rem; }
+    .article-intro-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #1c1a17; }
+    .article-intro-wrap::after { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 5px; background: #1c1a17; }
+    .article-intro { font-size: 0.98rem !important; color: var(--ink-mid) !important; }
+    .article-subheading { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.05em; margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+
+    .qa-block { margin: 2rem 0; }
+    .qa-q { margin-bottom: 0.8rem; }
+    .qa-q .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: var(--ink); }
+    .qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
+    .qa-a { display: flex; gap: 0.3rem; align-items: baseline; }
+    .qa-label { font-size: 0.95rem; font-weight: 500; color: var(--ink); flex-shrink: 0; }
+    .qa-a .qa-text { font-size: 0.95rem; font-weight: 300; line-height: 2.0; color: var(--ink); }
+
+    .inline-image { margin: 3rem auto; width: 100%; max-width: 750px; display: block; }
+    .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
+    .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
+
+    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
+    .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
+
+    .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { background: var(--warm); border-color: var(--ink-mid); }
+
+    .article-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .article-nav a { background: var(--paper); padding: 1.5rem; text-decoration: none; color: var(--ink); transition: background 0.2s; }
+    .article-nav a:hover { background: var(--warm); }
+    .nav-direction { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--ink-light); display: block; margin-bottom: 0.5rem; }
+    .nav-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; }
+    .nav-next { text-align: right; }
+
+    .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
+    .back-link:hover { background: var(--ink); color: var(--paper); }
+
+    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-decoration: none; }
+    .footer-logo span { font-style: italic; opacity: 0.6; }
+    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .ph-icon { opacity: 0.25; }
+
+    @media (max-width: 640px) {
+      .article-wrap { padding: 2.5rem 1.2rem 4rem; }
+      .inline-image { margin: 2.5rem auto; }
+      .article-nav { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-logo-wrap">
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">ARCHIVES</span>
+
+  </div>
+</header>
+
+
+<article class="article-wrap">
+
+  <!-- ヒーロー画像（タイトルの上） -->
+  <div class="hero-image">
+    <img src="images/article007-hero.jpg" alt="記事ヘッダー画像">
+  </div>
+
+  <!-- 記事タイトル・メタ情報 -->
+  <div class="article-header">
+    <span class="article-category">Interview</span>
+    <p class="article-work-title">『雨にゆれる女』</p>
+    <h1 class="article-title">青木崇高 × 半野喜弘監督 インタビュー</h1>
+    <div class="article-meta">
+      <span>2016.10.21</span>
+      <div class="meta-right">
+        <span>撮影 轟あずさ</span>
+        <span>取材・文 川端哲生</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="article-body">
+
+    <div class="article-intro-wrap"><p class="article-intro">　ジャ・ジャンクー、ホウ・シャオシェンら世界の名匠の映画音楽を手掛けてきたパリ在住の音楽家、半野喜弘の長編映画監督デビュー作『雨にゆれる女』が11月19日より公開される。男女のサスペンスを通して、ありきたりな日常の尊さを見出すことが出来る本作は、生々しい手触りがありながら、確固として「美しい作りもの」に根差されたという。大河ドラマ『龍馬伝』『平清盛』はじめ、代えのきかない存在感を放つ俳優、青木崇高が初の単独主演として挑み、主人公の健次を繊細に体現しているが、実はこの共作は2002年のパリでの半野監督との邂逅に端を発したもの。出会いから再会を経て、映画の制作から完成に至るまで、２人に話を聞いた。</p></div>
+
+    <div class="pull-quote">
+      <p>役者を志したばかりの頃に知り合って、今は役者としての自分の世界を持っている青木崇高との関係性は貴重でしたね。（半野）</p>
+    </div>
+
+    <div class="qa-block">
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">パリの僕の家の近くのカフェに何人かでいたんです。そこに1人の図体の大きなバックパッカーがやって来て、「日本人ですか？僕も一緒に吞んでいいですか？」って言うわけですよ。えらく調子のいい奴だな、と思いつつ役者をやってると言うので、当時はもう僕も映画音楽をやっていて、そんな話もしたりして。結局、その場にいた僕の仲間の家に泊まることになったんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">２００２年ですね。当時の僕はブラブラ色んな国を旅していたんです。翌日、犬の散歩したりしましたよね（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">そうそうそう（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">日本人を見掛けたらよく声を掛けていて、その時も確か一緒に旅してる男がいたんですけど、「俺、行ってくるわ」って、1人で半野さん達のところに行ったんですよね。快く受け入れて下さって。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">その当時はまだ俳優業を始めたばかりの頃ですよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">キャリアとしてはまだスタートしていないような頃で、オーディションを受けたりしてました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">当然、一緒に映画を撮るなんて想像もしてないわけですよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">全然、全然。役者志望の…</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">そう、よくおる奴ですよね（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">お互いのどこに惹かれたんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">惹かれるとかではないです（笑）日常の一片というか。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">そんな大袈裟なものではなく、お互い大阪出身で、なんとなく意気投合して。それこそ、別れた後も仲間と「あいつどうかな？」「厳しいんじゃない？」って話してたくらいでしたから（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">その後、半野監督が長編映画を撮ることになる過程で、青木さん主演ということをイメージしていくのは、再会も含め、どの辺りなんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">１０年くらいして、都内のとある店で再会するんですけど、その頃ちょうどNHKの大河ドラマをたまたま見て、「あ、青木くんだ。頑張ってる。良かったなぁ」と思っていたので、自然な流れで、一緒に何かやろうと。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">半野さんも監督として短編などの映画を撮られてたんです。それを観てたので、映像もやられるという認識はあったし、もうこの再会はそういうことでしょ！って感じでした。まぁ、お酒の勢いもありつつ（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">（笑）ただね、実際問題として、誰かと映画を撮ろうと思った時に、役者としての自我が成立する以前を知ってる状態の人とプロフェッショナルな作品づくりを出来る機会って無いんですよ。我々が知り合う人って、プロとしての自我が完成してる人、もしくは完成してない状態の人のどちらかなので。完成してない状態の頃も知っていて、かつ、今はプロとしての力を持っているという条件を満たす人って、普通はいないですから。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">再会までの期間が空いたからこそ、それが可能でしたよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">役者を志したばかりの頃に知り合って、今は役者としての自分の世界を持っている青木崇高との関係性は貴重でしたね。何か特別な状態でやれるんじゃないかな、というテンションだったんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">再会された時はプライベートですよね。青木さんに変化を感じました？</span>
+      </div>
+
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">やっぱり自信が付いてるから、大きくなったように見えました。苦しい現場を抜け、挫折もして、また大きく成功もしてるわけだから。いい時期に再会出来たし、だからこそこんなスピードで作品が完成に至ったんだと思いますね。</span>
+      </div>
+
+
+    </div>
+
+    <div class="pull-quote">
+      <p>どこにでもいる人間をドキュメンタリーとして演じるのではなくて、見たことのない人間を演じようってことですね。（半野）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">再会から脚本が完成するまでの時間はどれくらいだったんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">２年くらいあったのかな。この作品に関しては、プロデューサーにも青木崇高でやりたいって話はしていて、何て言うんですかね、僕の頭の中で動いてる人物が既に青木崇高って感じで。青木崇高のために書くということではなく、僕が描くストーリーの中に立ってる人物が既に青木崇高というところから脚本がスタートしてるんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">青木さんは、その脚本を読んだ最初の印象はいかがでした？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">読む前に話は大体聞いていたので、脚本に起こされた時は、本当に始まるなって気がしました。僕の演じる「健次」という役は直接的な表現じゃないにしても過去をちゃんと持っていないと、表層的な作り込みではすぐに嘘がバレてしまう危うさがあるから、これはやりがいがあるなと。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">「飯田健次」である前に、「久保川則夫」である必要があるわけですよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">そうなんです。則夫の上に健次が乗っているので、健次ベースで作って、則夫のシーンだから則夫ということでは綻びは出来ると思ったので、則夫について考え抜いてから健次を作るというプロセスはないといけないとは考えてました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">でも脚本の完成前から話していたのは、大体が則夫としての話でしたね。脚本上の名前は健次なんですけど、健次としての台詞を言ってる時の則夫はどうあるべきかっていう話をしていました。自分を防御するために作り上げた人格が健次であって、則夫がそれを演じているわけなので、青木崇高が則夫を演じ、その則夫が健次を演じる。それが一番自然なはずだ、と。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">そういった事前の話し合いを踏まえて、現場での健次はいかがでした？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">素晴らしかったって言うと何か気持ち悪いけど（笑）僕と青木と２人で、「健次はどんな人間だろう？どんな立ち振る舞いをするだろう？」って話し合いをしながら作っていったので、現場では、その更に上を目指せるかっていう戦いが楽しかった。僕が助けられることも沢山ありましたし。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">でも本読みの段階では、健次の人物像についてはお互い確認できてましたけど、実際演じるとなった時に、「全然違うやん！」と言われたらどうしよう、怖いなと思ったりもしてたんですよ（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">ただ、僕らの中で根拠の無い自信はあったんです。まだセットが出来上がってない埃だらけの状態の中に、青木崇高と大野いとの２人が来てくれて、具体的なシーンのリハーサルではなく、「ここでこの男はどうなんだ？ この女はどうなんだ？」っていう確認作業を数日間やって、それぞれ持っていた疑問を消せたので、クランクインの時は自信を持ってやれてましたね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">半野監督が目指し、また現場で更に上を目指そうとしたのは、詳しくはどういったものだったんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">今回、いわゆるドキュメンタリーを基軸にしたリアルというタイプの映画ではないことをやろうと思ったんです。フィクションの中でのリアリズムをどこまで作れるか。どこまで嘘をつけるか。どこにでもいる人間をドキュメンタリーとして演じるのではなくて、見たことのない人間を演じようってことですね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">映画的虚構を信じるというようなことですか。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">そうです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">ちゃんとエンターテイメントとして、ということですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">言うなれば、美しい作りものですね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">それで言うと、半野監督が映画音楽を担当されているジャ・ジャンクー監督の近年の映画にも、そういったアプローチを感じますよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">特にジャ・ジャンクーの影響ということではないですけど、彼も同じことを言っていて、ドキュメンタリー的な手法が駄目ということではなく、画家にせよ、映画監督にせよ、音楽家にせよ、おそらく役者も同じなんですけど、究極的には現実に無いものを作りたいんです。写真が発明された後も画家が絵を描く理由はそこにしかない。音楽もそうで、音の組み合わせによって、人が悲しんだり、高揚したり、心を動かすような嘘をつく。世の中に音は沢山あるけど、それだけで音楽にはならない。僕がやりたかった映画はそういうものなんです。ペテン師みたいに完璧な嘘をつこう、と。リアル以上にリアルじゃないと人は騙されてくれないですから。だから、役者は大変だったと思います。テクニック、経験値があれば、ある種、自然体の芝居というのは難しくないと思うけど、そうではなく、リアルではないのに、リアルに感じられるレベルのことをやりたかったんです。</span>
+      </div>
+
+    </div>
+
+    <div class="pull-quote">
+      <p>空間とリンクする感覚はありました。シーンを重ねる毎に空間とキャラクターが張り付いていきましたね。（青木）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">青木さんは、役者としてその要求をどのように身に落としていきましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">最初のうちは、リアリティに近付き過ぎてました。内面は出来ていたんですけど、アウトプットの調整はいるだろうって話はしてたんです。身体や気持ちの状態をそのまま出しても映画として不足する部分があったので、もう少し情報を加えないといけない。それはやっていく中で、この映画が進むべき方向に合致していったのかなって思います。でも、自分で言うのもなんですけど、こういうのって「表現」について普段から考えてないと出来ない会話だったので、自分がそれに反応出来る感覚を持っていてよかったな、っていうのは感じました（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">たぶん僕が説明してたことが観念的というか、抽象的だったので、人によっては「お前、何言ってんのか分かんねーよ！」ってなる可能性はあったと思うんです（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">なるほど（笑）「健次」は情が移るような人間らしさもある一方、得体の知れない怖さも孕んでいるので、全編通して緊張感が持続していきますよね。それが映画としてのサスペンスを生んでいるわけですけど、青木さんが体現する健次は、他のどの出演作でも見たことがない青木さんでした。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">嬉しいです。それは１つのテーマとして、監督と話してましたから。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">その健次の前に現れる謎の女性、理美を演じる大野いとさんとの呼吸はいかがでした？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">彼女は無垢であったので、それを活かせたらと僕は思っていました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">実は追いつめた部分もあって、最初は泣いてたりもしたんです。でも、彼女が泣く理由は常に悔しさだったんです。OKを出しても、「監督は本当はもっと望んでたんじゃないか」とか「青木さんの芝居に対して、私は反射できなかった」とか、出来なかった自分自身に対しての涙だった。これは、絶対に良くなっていくだろうなって感じました。例えば、相手役の青木に怒られたから泣いてるというようなことではないですから。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">役者は過敏になるところもあるんですよ。OKと言われたけど本当はそう思ってないんじゃないかっていう不安は、本来、役者は考えなくていいことで。自分もそういう気持ちはありますけど、監督がOKと言ったらそれが絶対なんだと思うようにしてるんです。悔しいと思うこと自体はすごく良いことですけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">ただ、「理美」も偽っていた自分から本当の自分に変わっていくという過程がある役なので、そういった葛藤も役にうまく嵌っていくとは思ってました。撮影の後半は、青木も大野も、ほとんどワンテイクだったんじゃないかな。健次と理美になりきっていたから。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">そうですね。空間とリンクする感覚はありました。現場の近くのホテルに泊まっていて、すぐに現場に入れたので、なるべくその空間にいるようにしてましたから、シーンを重ねる毎に空間とキャラクターが張り付いていきました。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">空間の話で言うと、この作品はロケーションがとにかく独特だと思いました。舞台は日本ですが、健次の住んでいる場所なんて無国籍な空気が漂っていて。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">そうなんですよ、あれ建てるのに２億かかったんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">え、そうなんですか！？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">すいません、冗談です。本当はあれ、青木の実家なんですよ。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">そうそうそう（笑）僕ももっと稼いで、実家に仕送りをしないと。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">（笑）すいません、どこまでが本当なんでしょうか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">（笑）場所は川崎や羽田の辺りです。ただね、常識的に考えると、健次という男は社員寮の四畳半に住んでいるという設定になると思うんですけど、僕が制作部、美術部の方々に無理難題をしたわけです。健次はそんなしょぼいところに住んでない。健次は四畳半でカップラーメンを食べないんだよ、と（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">それが、さっきも話した映画のリアルにも繋がりますよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">そう。史実に基づく事件ものなら、たぶん四畳半ですよ。今回はそういうリアリズムに逃げないことをやろうということだったので。ある程度の広さがある廃墟で、生活がしづらい中でも自分なりの生きるラインを勝手に作っているような設定で、更に出来たら２階がいいって、そんな条件を言ったら「そんな場所は絶対ない」と即答されたんですけど、凄いですね。探してきてくれたんです。クランクインまで１ヶ月を切った頃でした。あの場所が見つかったことは、映画にとって大きかったですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">勝った！って言ってましたよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">半ば諦めかけてたからね。内心では四畳半だなって思い始めてましたから（笑）たぶん無理だろうなって。スタッフには強気に言ってたものの。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">引くに引けなかったんですね（笑）でも、職場の工場にしても、海にしても、ロケーションは素晴らしかったですよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">だから本当に各スタッフの努力のおかげで出来上がった映画だと思います。</span>
+      </div>
+
+    </div>
+
+    <div class="pull-quote">
+      <p>当たり前の日常を理美といることで感じられる。ずっと続かないと分かっていながら、健次は安息を覚えたんだと思います。（青木）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">小道具など細部にも映画の世界が行き届いているように感じました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">劇中のジェンガは自分で削りましたね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">脚本上に健次がジェンガを削る場面は無いですけど、作品世界の中で削っていたという事実はあるわけで、撮影する以前に青木が健次と同じ行為をしてきてくれていることで、乗り移ってくるものは確実にあるはずなので。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">健次は基本的に孤独で物にしか向き合っていなかったし、ジェンガは時間経過を表す役目や、ある種のメタファーにもなっている重要なアイテムでしたから。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">自分から申し出てくれて嬉しかったですね。もう、撮影後半なんて、「監督、健次は左側には歩かないんじゃないでしょうか」とか呟くんですよ（笑）気になって何故かと尋ねたら「健次としては左に行く気がしないんです」って。じゃあ、カメラ位置を変えようって。理由は無いけどそういう気がするぐらいに本人の意識が役に入り込んでいる状態だったんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">あくまで役として、ってことなんですけど（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">これは役者の我が儘ということでは決してないんです。言われても駄目なところは当然、僕も駄目だと言うわけですから。そういうディスカッションが出来ること自体が良かったんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">個人的にそういう状態をご褒美タイムって呼んでるんです（笑）作品と向き合って、ロケーションと意識がリンクして、放っておいても役と同化するって状態は、作品の中盤から後半にしかないと思っていて、そこから更に面白いことを深められるところもある。だからといって自分の独りよがりにはならないということは大前提にあるんですけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">半野：</span>
+        <span class="qa-text">そういった役とのアジャストメントに時間を掛ける必要がなかったので、撮影期間が短かくても、撮り上げることが出来たんだと思いますね。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">最後に。この映画の中で描かれる健次にとって、理美はどのような存在だったと思いますか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">女神ということではないと思うんです。理美が特別だったからではなくて、健次が何かを抱えてしまう以前の日常に戻るわけではないですけど、当たり前の日常を理美と居ることで感じられる。ずっと続かないと分かっていながら、安息を覚えたんだと思います。２人がその後に直面する事実はありますけど、一緒にいたその期間が特別だったんだと思います。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">青木さんにとっても、この映画は特別なものになりそうですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">青木：</span>
+        <span class="qa-text">誇れるものですし、１４年前に出会って始まった運命的な縁で半野さんと初めて映画を撮るというこの貴重な経験はもう無いわけで、役者人生に置いても重要なポイントになる作品だと思います。是非、多くの人に観て欲しいです。</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="index.html" class="back-link">← BACK TO LIST</a>
+  </footer>
+
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
