@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カネコアヤノ × マヒトゥ・ザ・ピーポー（GEZAN）× 今泉力哉監督 インタビュー — SUB POKKE</title>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1a17;
+      --ink-mid: #4a4640;
+      --ink-light: #8a8278;
+      --paper: #faf8f4;
+      --warm: #f0ebe0;
+      --header-bg: #ffffff;
+      --accent: #5a4a3a;
+      --rule: #d8d0c0;
+      --serif: 'EB Garamond', 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+    header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .site-logo-wrap { display: flex; align-items: center; gap: 0.8rem; }
+    .site-logo { text-decoration: none; display: flex; align-items: center; }
+    .site-logo img { height: 28px; width: auto; display: block; }
+    .site-archives { font-family: 'Courier Prime', serif; font-style: normal; font-size: 0.88rem; color: var(--ink-light); letter-spacing: 0.12em; align-self: flex-end; line-height: 1; padding-bottom: 2px; margin-left: 0.5rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--ink-mid); font-weight: 400; transition: color 0.2s; }
+    nav a:hover { color: var(--ink); }
+
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+    .article-header { margin-bottom: 3rem; animation: fadeUp 0.6s ease both; position: relative; z-index: 1; }
+    .article-category { display: inline-block; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--ink-light); text-transform: uppercase; border-bottom: 2px solid #00aacc; padding-bottom: 0.2rem; margin-bottom: 1.5rem; font-weight: 400; }
+    .article-work-title { font-family: var(--serif); font-size: clamp(1.0rem, 2.5vw, 1.3rem); font-weight: 400; line-height: 1.5; letter-spacing: 0.05em; color: var(--ink-mid); margin-bottom: 0.4rem; }
+    .article-title { font-family: var(--sans); font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; line-height: 1.6; letter-spacing: 0.03em; margin-bottom: 1.5rem; }
+    .article-subtitle { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; justify-content: space-between; font-size: 0.7rem; color: var(--ink-light); letter-spacing: 0.12em; padding: 1.2rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .article-meta > span { color: var(--ink); font-weight: 500; }
+    .article-meta .meta-right { display: flex; gap: 1.5rem; }
+    .meta-divider { width: 1px; height: 12px; background: var(--rule); }
+
+    .hero-image { margin: 1rem 0; animation: fadeUp 0.7s 0.1s ease both; }
+    .hero-image .img-placeholder { width: 100%; aspect-ratio: 780/468; background: linear-gradient(135deg, #d8d0c0 0%, #c8bfae 50%, #b8b0a0 100%); display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; height: auto; display: block; max-width: 780px; }
+    .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
+
+    .article-body { animation: fadeUp 0.7s 0.2s ease both; }
+    .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 300; }
+    .article-intro-wrap { position: relative; padding-left: 1.6rem; margin-bottom: 2.5rem; }
+    .article-intro-wrap::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #1c1a17; }
+    .article-intro-wrap::after { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 5px; background: #1c1a17; }
+    .article-intro { font-size: 0.98rem !important; color: var(--ink-mid) !important; }
+    .article-subheading { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.05em; margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+
+    .qa-block { margin: 2rem 0; }
+    .qa-q { margin-bottom: 0.8rem; }
+    .qa-q .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: var(--ink); }
+    .qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
+    .qa-a { display: flex; gap: 0.3rem; align-items: baseline; }
+    .qa-label { font-size: 0.95rem; font-weight: 500; color: var(--ink); flex-shrink: 0; }
+    .qa-a .qa-text { font-size: 0.95rem; font-weight: 300; line-height: 2.0; color: var(--ink); }
+
+    .inline-image { margin: 3rem auto; width: 100%; max-width: 750px; display: block; }
+    .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
+    .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
+
+    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
+    .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
+
+    .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.2s; }
+    .tag:hover { background: var(--warm); border-color: var(--ink-mid); }
+
+    .article-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .article-nav a { background: var(--paper); padding: 1.5rem; text-decoration: none; color: var(--ink); transition: background 0.2s; }
+    .article-nav a:hover { background: var(--warm); }
+    .nav-direction { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--ink-light); display: block; margin-bottom: 0.5rem; }
+    .nav-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; }
+    .nav-next { text-align: right; }
+
+    .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
+    .back-link:hover { background: var(--ink); color: var(--paper); }
+
+    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-decoration: none; }
+    .footer-logo span { font-style: italic; opacity: 0.6; }
+    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .ph-icon { opacity: 0.25; }
+
+    @media (max-width: 640px) {
+      .article-wrap { padding: 2.5rem 1.2rem 4rem; }
+      .inline-image { margin: 2.5rem auto; }
+      .article-nav { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+
+
+
+
+/* ── HAMBURGER MENU ── */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 200;
+  position: fixed;
+  top: 1.1rem;
+  right: 1.5rem;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  transition: all 0.3s ease;
+}
+
+.hamburger-overlay {
+  position: fixed;
+  inset: 0;
+  background: #888880;
+  z-index: 150;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  overflow: hidden;
+}
+
+.hamburger-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hamburger-close {
+  position: absolute;
+  top: 1.6rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+
+.hamburger-close:hover {
+  color: rgba(255,255,255,0.9);
+}
+
+.overlay-logo {
+  position: absolute;
+  top: 2rem;
+  left: 2.2rem;
+  width: 100px;
+  mix-blend-mode: multiply;
+  filter: invert(1);
+  opacity: 0.88;
+}
+
+.overlay-body {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  max-width: 320px;
+}
+
+.overlay-section {
+  margin-bottom: 2.4rem;
+}
+
+.overlay-heading {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.38em;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.overlay-text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.82rem;
+  line-height: 2.1;
+  color: rgba(255,255,255,0.82);
+  font-weight: 300;
+}
+
+.overlay-illust {
+  position: absolute;
+  bottom: -3rem;
+  right: -2rem;
+  width: 48%;
+  max-width: 360px;
+  mix-blend-mode: multiply;
+  filter: invert(1);
+  opacity: 0.5;
+  pointer-events: none;
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-logo-wrap">
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">Archives</span>
+    </div>
+  </div>
+</header>
+<button class="hamburger-btn" id="hamburger-btn" aria-label="メニュー">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="hamburger-overlay" id="hamburger-overlay">
+  <button class="hamburger-close" id="hamburger-close">✕ CLOSE</button>
+
+  <!-- ロゴ：左上 -->
+  <img class="overlay-logo" src="images/menu-logo.jpg" alt="SUB POKKE">
+
+  <!-- テキストコンテンツ：中央左 -->
+  <div class="overlay-body">
+    <div class="overlay-section">
+      <p class="overlay-heading">About</p>
+      <p class="overlay-text">
+        <!-- ここを差し替え -->
+        SUB POKKEは、2016年から2019年にかけて存在した<br>インタビュー主体のウェブメディアです。<br>映画監督や俳優との対談を中心に、<br>当時の記録をここに残します。
+      </p>
+    </div>
+    <div class="overlay-section">
+      <p class="overlay-heading">Contact</p>
+      <p class="overlay-text">
+        <!-- ここを差し替え -->
+        お問い合わせ先のテキストがここに入ります。
+      </p>
+    </div>
+  </div>
+
+  <!-- イラスト：右下 -->
+  <img class="overlay-illust" src="images/menu-illust.jpg" alt="">
+</div>
+
+
+
+  </div>
+</header>
+
+
+<article class="article-wrap">
+
+  <!-- ヒーロー画像（タイトルの上） -->
+  <div class="hero-image">
+    <img src="images/article000-hero.jpg" alt="記事ヘッダー画像">
+  </div>
+
+  <!-- 記事タイトル・メタ情報 -->
+  <div class="article-header">
+    <span class="article-category">Interview</span>
+    <p class="article-work-title">『退屈な日々にさようならを』</p>
+    <h1 class="article-title">カネコアヤノ × マヒトゥ・ザ・ピーポー（GEZAN）× 今泉力哉監督 インタビュー</h1>
+    <div class="article-meta">
+      <span>2017.02.24</span>
+      <div class="meta-right">
+        <span>撮影 木村和平</span>
+        <span>取材・文 川端哲生</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="article-body">
+
+    <!-- 導入テキスト -->
+    <div class="article-intro-wrap"><p class="article-intro">　恋愛の前提となる「好き」という想いそのものを疑い、関係性の機微を丁寧に描いてきた今泉力哉監督の最新作『退屈な日々にさようならを』（第29回東京国際映画祭出品作品）が２月２５日より劇場公開される。本作は、自身が作演した初舞台『アジェについて』（2015）でも触れられた、これまで正対することに慎重だった"生き死に"がテーマ。本作の劇伴を担当したマヒトゥ・ザ・ピーポー（GEZAN）。自らが演じる牛越あみとしての劇中歌に加え、主題歌も手掛けたシンガソングライター、カネコアヤノ。そして今泉監督の３人が会して語らうのは、この映画に果たした役割は小さくないだろう音楽について。昨今（いま）を生きる表現者の佇まいとは。</p></div>
+
+    <!-- 引用ブロック1 -->
+    <div class="pull-quote">
+      <p>「悲しかったり、楽しかったりする音楽を作るのは簡単なんだけど、どちらとも言えないようなものを探りながらつくったんです。」（マヒト）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">本作の劇伴を担当されているマヒトゥ・ザ・ピーポーさんと今泉監督は、どういった経緯で知り合ったんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">2015年の春頃に、自主制作で長編映画を作りたいと考えていたことがあって、結局作れてないんですけど、そのための役者とスタッフを募った時に、連絡をしてきてくれた沢山の人達の中にマヒトさんがいて。「自分の音楽が合うかどうかは分からないけど、」みたいな内容のメールでしたよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">はい。今泉さんの映画は観ていたんですけど、自分と同じ空気感の人とは思っていなかったんです。でも気になる感じがあって。自分が関われるような何かだとは思っていなかったけど、何故か気になる。その理由が分からないからメールをしたみたいなところもあったんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">マヒトさんとカネコさんの２人は面識はあったんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">面識はなかったです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">存在は知ってたけど、喋ったのはこれが初めてだよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">今日が初めて。私も高円寺で見掛けたりはしてたけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">映画の世界でも、狭いようで意外と知らなかったみたいなことがよくあるので、もしかしたら２人はこれが初対面になるのかもって思いながら今日を迎えたという…（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">カネコさんと今泉監督は以前から交流がありますよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">知ったのは、カネコさんが出演している『恋文Ｘ』（2014）という映画を観たのが最初で、『サッドティー』（2013）の公開前に行ったSPOTTED主催の前夜祭イベントに出て頂いた縁もあって。今思うと、カネコアヤノ、トリプルファイヤー、水曜日のカンパネラという豪華な面子…。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">カネコさんは主題歌「退屈な日々にさようならを」、劇中歌「わすれてたこと」に加えて、役者としても出演されています。この作品はワークショップ映画でもありますが、オファーに至った経緯は？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">カネコさんが演じた牛越あみは、ワークショップ参加の生徒で嵌りそうな人が見つからなくて、役柄的にもポイント出演になってしまいそうだったので、だったら別で、ちゃんと歌える人に出てもらった方がいいのかもってなったんです。オファーをして、喫茶店で久しぶりにお会いした時に、おかっぱのイメージがあったけど髪が長くなっていて、「もしかしたらイメージ違うかもしれない」って内心思いながら、あらすじを口頭で説明したら、「やばーい！」って、それで大丈夫だなって（笑） 映画のタイトルはカネコさんの曲から取っているので、曲にインスパイアされて作った映画と勘違いされがちなんですけど、あの曲をエンディングに使うって決めたのも実は撮影の後で。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">エンディングで流れる主題歌は映画にかなり嵌っていますよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">曲もそうですけど、某シーンで、劇中で演じてるアヤノちゃんが素に返る瞬間にドキッとしますよね。虚実を行き来してる感じがしたから。映画全体からも作り手である今泉さんの空気感が滲んじゃってるところとか、役者の演技と素が出入りしているところにドキドキしました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">撮影が終わった後で仮編集の段階のざっくりした粗いものをマヒトさんに見てもらった時に、今、言ってくれたようなこの映画の肝というかテーマみたいなものを面白がってくれて。理解出来なくて首を傾げる人もいると思うんですよね。作品の出来について自分でも不安だったけど、その反応が後押しになった部分もあって、正式に音楽をお願いすることになったんです。この映画の前に、ある仕事のために作詞作曲した適当な鼻歌をマヒトさんに曲にしてもらうために家に来てもらったことも実はあって、それは色々な事情があって、お蔵入りになったんですけど（笑）</span>
+      </div>
+
+    </div>
+
+
+
+    <div class="inline-image">
+      <img src="images/article000-1.jpg" alt="写真1">
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">基本的に出来上がった映像に音楽を付けていくという行程だったんですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">脚本から作ってもらったり、同時進行で制作していく形ではなかったですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">そうだったんですね。最初に映画を観た時は、マヒト君が作ったとは意識せず、素直に映画に合った素敵な音楽だなって思った。なんの違和感も無く入ってきました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">それは個人的にも重視していて、「マヒトゥ・ザ・ピーポーでっせ」感を如何に出そうかって思いは常にどこかにあったりするんだけど、この映画を最初に観た時から、映画は映画だけで、音楽で飾り付けなくていいみたいな気持ちが根底にあって、自分の個性は必要ないってところからスタートしたので。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">最初に会って話したことで覚えてるのが、青葉が義人を看取るシーンについての話で、撮影時は、音を一切入れないシーンのつもりでいたんですけど、マヒトさんはここに音を付ける意味があるって言っていて、一体ここにどういう音楽つけるんだろう？ って。マヒトさんが言うには、悲しいとか寂しいみたいな音ではなくて、温かい感じというか、言葉として正確には覚えてないんですけど、そんなやり取りがあって。自分では全く想像つかなかったので、「使わないかもしれないですけど、お願いできますか？」と依頼したんです。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">あのシーンで流れる音楽は紋切り型ではない解釈で、とても印象的ですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">あのシーンの音楽は、愛っていう感じがした。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">今となっては、あのシーンに音楽が無いパターンは考えられないくらいになりましたから。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">今泉さんの映画って、「嬉しい」や「悲しい」って感情が曖昧というか、そこの揺れみたいなものがあるじゃないですか。どちらとも言えないような感情。分かりやすく悲しかったり、楽しかったりする音楽を作るのは簡単なんだけど、どちらとも言えないようなものを探りながら作ったので、初めての映画音楽なのに、いきなり難しいことやってるって、自分で思ってましたね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">『サッドティー』の音楽をお願いしたトリプルファイヤーとの作業もそうだったんですけど、自分も映画に音楽は無くていいって思ってた時期が長くあったから、映画音楽の基本やルールが分からなくて。詳しい人の話を聞くと、シーンではなく人物に沿って音楽を付けると言っていて、へぇと感心するけど、そういった選択肢すら持ってないから、音楽に関して自分から主導権を握るようなことはないんです。全く分からないので。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">この映画についてうまく言葉にしづらくて、ずっと言わなきゃとは思ってるんですけど、普段から言葉にするのが苦手なのもあって（笑） だけど観て最初に思った感情は「これ、知ってる！」ってことだった。私もずっと考えてたことだったから、劇中歌もすぐに湧き上ってきたんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">劇中歌は、牛越あみとして唄う歌だから、失礼と思いながらも言葉の断片をこちらから渡してはいたけど、出来上がった曲は本当にイメージ通りで。今言ったカネコさんがずっと考えていたことっていうのは、死生観についてのことだと思うけど、それはマヒトさんと話した時にも言われました。実際に亡くなってもその事実を知らされなければ、まだ生きているんだという感覚。これは理解できない人だっていると思うけど、分かり合える２人と一緒に作れたのは良かったなって思います。</span>
+      </div>
+
+    </div>
+
+
+
+    <div class="inline-image">
+      <img src="images/article000-2.jpg" alt="写真2">
+    </div>
+
+    <div class="pull-quote">
+      <p>「マヒトさんのつくった、看取るシーンの音楽然り、カネコさんの劇中歌然り、直しが無かったんですよね。それがやっぱりすごくて。」（今泉）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">「退屈な日々にさようならを」の主題歌起用を決めたタイミングは？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">映画タイトルにもなってるんですけど、これはカネコさんの昔の曲で、「待ち望んじゃないのになんで君はやってきたの」って歌詞が、青葉が福島を訪れる行動にリンクしてて、撮影中になんとなくこの曲を使いたいみたいな話をカネコさんにしたんだけど、そしたら「誰にも聞かれたことがないから言ったことはないけど、実はあの曲は失恋の歌じゃなくて震災の後の気持ちを歌った曲なんです」って言われて、マジか！ってなった。この映画は福島で撮影していて、震災の話は自然と絡むから、また違った角度からリンクしたなって偶然の合致を感じたんですよね。この曲は2012年に作ったと言ってましたけど、震災は意識してたんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">意識というか、はい、震災があった後に作りました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">実はその2012年のテイクが好きで、声とか縒れてて、音程も不安定なんだけど、映画が表現してるあやふやな感情に合ってる気がして。新たにリテイクしたものの方がポップでカタルシスがあるし、バンドとしての勢いもあるから映画のエンディングとしては相応しいと思うけど、個人的には、2012年のテイク方はアヤノちゃんのミューズ感があって好きなんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">なんとなく分かります。だけど、劇中歌「わすれてたこと」は弾き語りなんですけど、牛越あみとカネコさんは別という意味で、カネコアヤノとしてのエンディング曲「退屈な日々に〜」は、弾き語りではなく、バンドで録り直したテイクで良かったかなとは思います。</span>
+      </div>
+
+    </div>
+
+
+
+    <div class="inline-image">
+      <img src="images/article000-3.jpg" alt="写真3">
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">これに限らず、リリースして自分の手を離れていった自分の作品に対してはどういう感覚で接しますか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">手を離れたら人のものって感じで、どう思われてもいいかもしれないですね。この映画の音楽ももし使われなかったとしても、作るまでが楽しかったからそれで良かった。だから劇場で映画を観た時も距離を置いて観られて、気持ちよかったですね。自分の音楽という気持ちがなかったというか。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">仮に、昔のGEZANの曲を使うみたいな機会があったとしたらどうですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">その状況にならないと分からないですけど、世に出ている自分の曲に基本的に関心が無いんです。そもそも過去の曲を自分で聞かないですから。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">私も過去の曲って聞かない。今回の「退屈な日々にさようならを」って曲は本当に音楽を始めたばかりの初期の曲だったのもあって…（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">カネコさんの気持ちとしては、昔の音源を映画に使ったら、それを聞いてライブに来た人に、当時のように歌えないという状況が嫌なのかもしれないですよね。それは分かる気がする。例えば、バンバン音楽性が変わっていくアーティストがファンから過去の音楽性の方が良かったって言われちゃうことがあるじゃないですか。そういうことが起きる可能性もあるから。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">ただ「退屈な日々に〜」に関しては、2012年の音源以上のものは録れないとも思ってはいて。あれはあの時にしか歌えないだろうなっていうか、「歌」としてはあれが一番良かったのも自分で分かっているんです（笑） だから意地もありました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">あと、マヒトさんの作った、看取るシーンの音楽然り、カネコさんの劇中歌然り、直しが無かったんですよね。それがやっぱり凄くて。台詞とのバッティングの関係で微調整はあったけど、直したのはそれぐらいで。カネコさんなんて撮影の都合で、劇中歌の納期は相当タイトでしたからね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">劇中歌は作るの楽しかったです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">歌詞に「昔はもっと汚い笑い方してた」ってありますけど、それ以外は割とこちらが渡した言葉から膨らました感じがあったけど、ここはカネコさんの中から湧き出てきたものだったんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">子供って、鼻水やヨダレ垂らして笑うじゃないですか。でも、大人はそういうのが恥ずかしくなって、笑い方とか話し方とか変わってきたりする。映画が地元に帰る話だったので、私も昔の友達に会うと、化粧とかして綺麗になっちゃって！とか思ったりするなぁって気持ちを書きました。昔は泥に塗れて笑ってたじゃん、みたいな（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">音楽をする上で、ソロワークとバンドで創作的に棲み分けている面はあるんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">出どころはどちらも同じで、スタジオで作ってもバンドでは出来ないものもあるから、そこ基準で振り分けてますね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">どちらでも出来る曲もあるんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">考えてみると無いので、そこで分けてるかもしれないです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">私もバンド編成と弾き語りは半々くらいだけど、バンドは単純に楽しくて（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">いいなぁ。1人は楽しくないですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">1人も楽しいです（笑） ずっと1人が楽しかったんですけど、最近はバンドが楽しくて、ライブを増やしてます。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">最初は1人だったんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">最初は３人でバンドみたいな形態でした。え、あ、音楽を始めた時は１人でしたけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">それはそうですよね（笑） どこまで遡るかになっちゃう。いきなり「よし、音楽を始めよう。３人で」とはならないから（笑） 最初は１人ですよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">映画って、1人で作れないから多くの人に頼ってそれがプラスになることもあるけど、拘わりがあればあるほど、特に頭に明確なイメージがある監督はたぶんきつい。自分はそういうタイプじゃないからいいんですけど。音楽を複数人で作りあげることのストレスみたいなものもあるんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">どうだろう。私は曲のアレンジ考えるのは苦手だけど、それを伝えるのも苦手だったりして（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">じゃあ、伝わらなさみたいなストレスはあるにはあるんですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">俺はあまりないですね。バンドだと、ライブハウス行く際に道順を考えたりせずに付いていくだけでいいからそういう楽さがあるので。1人だったら最悪ですもん。ギターの弦とかも未だに張れないんで（笑） メンバーに張ってもらってます。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">私も（笑） 頑張って自分でやっても直されたりする。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">フロントマンは感性の人が多いので、そうなるのかもしれないですね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">自分も技術的なことが全く分からないので、周りのスタッフにお願いすることは多いですね。監督でも知識として詳しい人は指示とかも細かい。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">映画が分業というか、技術を共有して作り上げるものということを勝手にバンドに置き換えたりして、甘えになってる部分も実はあるんです。自分は出来なくて仕方ないみたいな。「俺、駄目なんだよ、アンプ持てないんだよ〜」とか（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">（笑） でも本当にそうで、自分も色んな人の力を借りてるとは思います。学生の頃って、通知表も美術とか１だったんです。芸術系の大学に進むって希望した時も親しい友達からも失笑されたんで。そういう意味で言うと、映画は人の力に頼れるから本当に映画で救われてるって思いますね。実は、映画も過去に一度は辞めてるんですけど。</span>
+      </div>
+
+    </div>
+
+
+
+    <div class="inline-image">
+      <img src="images/article000-4.jpg" alt="写真4">
+    </div>
+
+    <div class="pull-quote">
+      <p>「震災が起こった時に周りが激しくなって怖いなって思ったけど、でも天気がいいし、みたいに思った。ずっとそれを歌ってる。」（カネコ）</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">そこから繋げるわけではないですが、劇中で山下義人が、或る理由から映画作りを断念するエピソードがあって、実生活と比して創作に向かう意義みたいなものを問うてるようにも感じたんですが、それぞれの意見を伺いたいです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">この映画でやろうとしてたことは、自分自身もそう思ってるかは断定できないんですけど、「それでも作る」みたいな人達がほとんどいないってことなんです。どんなことよりも創作を優先してる人は実際にいると思うんですけど、この映画に込めたのは、平気で辞めるし逃げてもいいってことで。それこそ震災の時なんてそうだと思うんですけど。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">マヒトさんとカネコさんは震災の当時は音楽活動はされてましたか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">していましたね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">私は曲を作り始めたくらいでした。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">音楽に限らず、災害などが起きた状況下で、自粛という話とは別に、ものづくりをしていることについて自問するような瞬間はありました？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">震災の時に、僕らの上の世代の人達が「全てがバレた」みたいなことを言っていて、例えば、バブル崩壊とか色んなことがあった中で社会や経済のヤバい状況とか隠されてきたけどそれが表沙汰になったみたいな。それを聞いた時に、自分はバブルの恩恵は特に受けてないし、状況が良かった頃を知らない世代だから、震災を機に映画や音楽を辞めるって意識がなかった。だから、創作に対して暗くもならなかったし、逆に、今まで皆そんな良い状況だと思ってたんだって思ったくらいでした。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">自分も良かった時代は分からないですね。ただ、震災でスイッチが入った人は沢山いて、原発や政治の知識が無い人が悪というか、思想の無い人が駄目っていう空気が出てきて、音楽が好きだったはずの人達もSNSでそういう情報ばかりで溢れかえるみたいな状態に違和感はありました。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">音楽をやってた人が活動家みたいになっていくことですよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">朝起きてカーテン開けて気持ちいいとか、さりげない当たり前の感覚はどこへいっちゃったんだろう？ って思ったりして。時代というより、そこへの寂しさが大きかったですね。その状況は現在まで続いてますけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">『くちばっか』（2012）って映画でも震災には触れていて、距離感は大事にしたし、分からないことは分からないでいいと思ったんです。今回の映画でも福島だから原発みたいなことを強く言うつもりはなくて、実家に帰った時の自分の実感を描いたというか。マヒトさんが言ったみたいな当たり前のことを無くしてまで、深刻にしてしまうとそれこそ作り物っぽくなると思うので。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">当たり前のことに目線を持つことの方がオルタナティヴな気がしていて。新しい何かを主張するより、当たり前のことにスポットする方が挑戦だなって思える周囲のムードみたいなものが今あって。最初の話に戻るんですけど、今泉さんの今までの作品は好きなんだけど、自分が普段抱いてる真ん中の感覚とド嵌りしてるとは思っていなくて、でも気になるのは、今回の映画でも合点のいくところがあったんですけど、言葉を変えると、今話したみたいな、最終的に暮らしに帰ってくるみたいなところ。死生観に関しても、青葉なりの主張を口に出してバラしてしまう弱さがある。例えば、ラース・フォン・トリアーみたいに、あのまま狂気に走り切るっていう面白さもそれはそれであると思うんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">確かに嘘を隠すことで、もっと重くはできますからね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">梶原にしてもそうで、決められないとか筋を通せない、人間の業というか、言わば、生活みたいなものにすごくオルタナティヴを感じていて、そこに惹かれたんだと思うんです。</span>
+      </div>
+
+    </div>
+
+
+
+    <div class="inline-image">
+      <img src="images/article000-5.jpg" alt="写真5">
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">世の中のムードが社会思想的なものに振り切っていることで、「オルタナティヴ」の価値観が逆転してるってことですよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">そっちの方に逆に挑戦を感じますね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">興味があることがどんどんそっちになってる気がして、映画を作った直後はすっからかんの状態になるんですけど、次を作るとなると、どんどんシンプルになってるんです。「普通」ではドラマを生み出しづらいんだけど。今まで恋愛とかで散々遊んできたけど…</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">え、それは映画の中でですよね？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">そうです！遊んでないです（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">びっくりした（笑） 今泉さんが遊んできたみたいに言うから。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">違う、違う。映画で浮気の話とかで遊んできたけど、そうではない、何もしていないもっと普通の人の話をやりたくなっているんです。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">世の中の状況がエグくなればなるほど、そういうものがオルタナティヴになっていくんですよ、たぶん。だから、今泉さんが思ってることは間違ってないと思います。</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">自分自身がつくる音楽もそちらに向かってる感触はあるんですか？</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">こうやって話してるくらいだからそうなんだと思います。生活感のあるというか「珈琲を飲んで〜」みたいな曲があるわけじゃないんですけど。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">「珈琲を飲んで〜」みたいな映画を自分も撮ってはいないです（笑） カネコさんは「珈琲を飲んで〜」みたいな曲を歌ってそう。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">歌詞に珈琲が出てくる曲はないけど…（笑）</span>
+      </div>
+
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">
+        <span class="qa-text">今の話で言うと、カネコさんは本能的にそれをやっていそうな人ですよね。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">そうですね。オルタナティヴに感じない。普通じゃんって思う。私はですけど。震災が起こった時に周りが激しくなって怖いなって思ったけど、でも天気がいいし、みたいに思った。そんな自分に逆にコンプレックスを感じたくらいだったから。でもずっとそれを歌ってる。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">だからこの映画でアヤノちゃんが演じるシーンが象徴してることって、そういうところから来てるんだろうなって思う。</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">今泉：</span>
+        <span class="qa-text">そうかもしれないですね。何でなんだろうって分からなかった部分もあったんだけど、ただ寝転がってるようだけど、誰がやっててもああならなかったんだろうな。本業の役者だとカット前後の動きも意識的になると思うけど、カット直後に自然に枝毛を弄り始めましたから（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">カネコ：</span>
+        <span class="qa-text">気付いたら枝毛を見てました（笑）</span>
+      </div>
+
+      <div class="qa-a">
+        <span class="qa-label">マヒト：</span>
+        <span class="qa-text">そういうアヤノちゃんが象徴する通り、本筋ではない何気ない生活を描いてるシーンにもとても惹かれるところが沢山ある映画だと思います。</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="article-footer">
+    <a href="index.html" class="back-link">← BACK TO LIST</a>
+  </footer>
+
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const overlay = document.getElementById('hamburger-overlay');
+  const closeBtn = document.getElementById('hamburger-close');
+  btn.addEventListener('click', () => {
+    overlay.classList.add('open');
+    btn.style.display = 'none';
+  });
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('open');
+    btn.style.display = 'flex';
+  });
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) {
+      overlay.classList.remove('open');
+      btn.style.display = 'flex';
+    }
+  });
+</script>
+
+</body>
+</html>
