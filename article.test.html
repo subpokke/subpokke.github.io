@@ -106,8 +106,6 @@
 
 
 /* ── HAMBURGER MENU ── */
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
-
 .hamburger-btn {
   background: none;
   border: none;
@@ -154,10 +152,11 @@
   border: none;
   cursor: pointer;
   font-family: 'Courier Prime', monospace;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
   color: rgba(255,255,255,0.5);
   transition: color 0.2s;
+  z-index: 10;
 }
 
 .hamburger-close:hover {
@@ -166,12 +165,23 @@
 
 .overlay-logo {
   position: absolute;
-  top: 2rem;
-  left: 2.2rem;
-  width: 100px;
+  top: 2.2rem;
+  left: 2.4rem;
+  width: 96px;
+  z-index: 2;
+}
+
+.overlay-illust {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 60%;
+  height: 120%;
+  object-fit: cover;
+  object-position: left center;
   mix-blend-mode: multiply;
-  filter: invert(1);
-  opacity: 0.88;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .overlay-body {
@@ -179,7 +189,8 @@
   top: 50%;
   left: 3rem;
   transform: translateY(-50%);
-  max-width: 320px;
+  max-width: 300px;
+  z-index: 2;
 }
 
 .overlay-section {
@@ -204,18 +215,6 @@
   color: rgba(255,255,255,0.82);
   font-weight: 300;
 }
-
-.overlay-illust {
-  position: absolute;
-  bottom: -3rem;
-  right: -2rem;
-  width: 48%;
-  max-width: 360px;
-  mix-blend-mode: multiply;
-  filter: invert(1);
-  opacity: 0.5;
-  pointer-events: none;
-}
   </style>
 </head>
 <body>
@@ -237,13 +236,16 @@
   <!-- ロゴ：左上 -->
   <img class="overlay-logo" src="images/menu-logo.jpg" alt="SUB POKKE">
 
-  <!-- テキストコンテンツ：中央左 -->
+  <!-- イラスト：右側、縦いっぱい -->
+  <img class="overlay-illust" src="images/menu-illust.jpg" alt="">
+
+  <!-- テキスト：左側中央 -->
   <div class="overlay-body">
     <div class="overlay-section">
       <p class="overlay-heading">About</p>
       <p class="overlay-text">
         <!-- ここを差し替え -->
-        SUB POKKEは、2016年から2019年にかけて存在した<br>インタビュー主体のウェブメディアです。<br>映画監督や俳優との対談を中心に、<br>当時の記録をここに残します。
+        SUB POKKEは、2016年から2019年にかけて<br>存在したインタビュー主体のウェブメディアです。<br>映画監督や俳優との対談を中心に、<br>当時の記録をここに残します。
       </p>
     </div>
     <div class="overlay-section">
@@ -254,14 +256,9 @@
       </p>
     </div>
   </div>
-
-  <!-- イラスト：右下 -->
-  <img class="overlay-illust" src="images/menu-illust.jpg" alt="">
 </div>
 
 
-
-  </div>
 </header>
 
 
