@@ -20,7 +20,7 @@
       --sans: 'Noto Sans JP', sans-serif;
     }
     html { font-size: 16px; scroll-behavior: smooth; }
-    body { background: #e8e0d0; color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+    body { background: #e8e0d0; color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 
     header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
     .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
@@ -48,8 +48,6 @@
     .hamburger-overlay {
       position: fixed;
       inset: 0;
-      width: 100vw;
-      height: 100vh;
       background: #888880;
       z-index: 150;
       opacity: 0;
