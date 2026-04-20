@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUB POKKE ARCHIVES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1a17;
+      --ink-mid: #4a4640;
+      --ink-light: #8a8278;
+      --paper: #faf8f4;
+      --warm: #f0ebe0;
+      --header-bg: #ffffff;
+      --accent: #5a4a3a;
+      --rule: #d8d0c0;
+      --serif: 'EB Garamond', 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { background: #e8e0d0; color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+    header { background: var(--header-bg); border-bottom: 1px solid var(--rule); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .site-logo-wrap { display: flex; align-items: center; gap: 0.8rem; }
+    .site-logo { text-decoration: none; display: flex; align-items: center; }
+    .site-logo img { height: 28px; width: auto; display: block; }
+    .site-archives { font-family: 'Courier Prime', serif; font-style: normal; font-size: 0.88rem; color: var(--ink-light); letter-spacing: 0.12em; align-self: flex-end; line-height: 1; padding-bottom: 2px; margin-left: 0.5rem; }
+
+    /* ── HAMBURGER MENU ── */
+    .hamburger-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 200;
+      position: fixed;
+      top: 1.1rem;
+      right: 1.5rem;
+    }
+    .hamburger-btn span { display: block; width: 22px; height: 2px; background: var(--ink); transition: all 0.3s ease; }
+
+    .hamburger-overlay {
+      position: fixed;
+      inset: 0;
+      background: #888880;
+      z-index: 150;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+      overflow: hidden;
+    }
+    .hamburger-overlay.open { opacity: 1; pointer-events: all; }
+
+    .hamburger-close {
+      position: absolute;
+      top: 1.6rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s;
+      z-index: 10;
+    }
+    .hamburger-close:hover { color: rgba(255,255,255,0.9); }
+
+    .overlay-logo {
+      position: absolute;
+      top: 2.2rem;
+      left: 2.4rem;
+      width: 96px;
+      z-index: 2;
+    }
+
+    .overlay-illust {
+      position: absolute;
+      top: -10%;
+      right: 0;
+      width: 60%;
+      height: 120%;
+      object-fit: cover;
+      object-position: left center;
+      mix-blend-mode: multiply;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .overlay-body {
+      position: absolute;
+      top: 50%;
+      left: 3rem;
+      transform: translateY(-50%);
+      max-width: 300px;
+      z-index: 2;
+    }
+
+    .overlay-section { margin-bottom: 2.4rem; }
+
+    .overlay-heading {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.38em;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .overlay-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.82rem;
+      line-height: 2.1;
+      color: rgba(255,255,255,0.82);
+      font-weight: 300;
+    }
+
+    /* ── MAIN ── */
+    .main-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--ink-mid);
+      text-transform: uppercase;
+      font-weight: 400;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #c8bfae;
+      margin-bottom: 2rem;
+    }
+
+    /* ── CARD GRID ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem 1.6rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--rule);
+      background: var(--header-bg);
+      display: block;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--ink-light); }
+
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: linear-gradient(135deg, #d8d0c0 0%, #c8bfae 50%, #b8b0a0 100%);
+    }
+    .card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .card:hover .card-thumb img { transform: scale(1.04); }
+
+    .card-body {
+      padding: 1rem 1.1rem 1.2rem;
+      background: var(--paper);
+    }
+
+    .card-work-title {
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: var(--ink-mid);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3rem;
+      line-height: 1.4;
+    }
+
+    .card-title {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 500;
+      line-height: 1.65;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.8rem;
+      color: var(--ink);
+    }
+
+    .card-date {
+      font-size: 0.68rem;
+      color: var(--ink-light);
+      letter-spacing: 0.12em;
+    }
+
+    /* ── MORE BUTTON ── */
+    .more-wrap { text-align: center; margin-top: 1rem; }
+    .more-btn {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      color: var(--ink);
+      text-transform: uppercase;
+      border: 1px solid var(--ink);
+      padding: 0.9rem 3rem;
+      background: none;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.2s, color 0.2s;
+    }
+    .more-btn:hover { background: var(--ink); color: var(--paper); }
+    .more-btn:disabled { display: none; }
+
+    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+
+    @media (max-width: 640px) {
+      .main-wrap { padding: 2rem 1.2rem 4rem; }
+      .card-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+      .overlay-illust {
+        width: 100% !important;
+        right: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        height: 100% !important;
+        object-position: right center;
+      }
+      .overlay-body { left: 1.8rem; right: 1.8rem; max-width: none; }
+      .overlay-logo { width: 72px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-logo-wrap">
+      <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">Archives</span>
+    </div>
+  </div>
+</header>
+
+<button class="hamburger-btn" id="hamburger-btn" aria-label="メニュー">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="hamburger-overlay" id="hamburger-overlay">
+  <button class="hamburger-close" id="hamburger-close">✕ CLOSE</button>
+
+  <img class="overlay-logo" src="images/menu-logo.jpg" alt="SUB POKKE">
+  <img class="overlay-illust" src="images/menu-illust.jpg" alt="">
+
+  <div class="overlay-body">
+    <div class="overlay-section">
+      <p class="overlay-heading">About</p>
+      <p class="overlay-text">
+        SUB POKKEは、2016年から2019年にかけて<br>存在したインタビュー主体のWebメディアです。<br>映画監督や俳優との対話を中心に、<br>当時の記録をここに残します。
+      </p>
+    </div>
+    <div class="overlay-section">
+      <p class="overlay-heading">Founder / Editor</p>
+      <p class="overlay-text">Tetsuo Kawabata</p>
+    </div>
+    <div class="overlay-section">
+      <p class="overlay-heading">Contact</p>
+      <p class="overlay-text">お問い合わせ先のテキストがここに入ります。</p>
+    </div>
+  </div>
+</div>
+
+<main class="main-wrap">
+  <p class="section-label">Articles</p>
+  <div class="card-grid" id="card-grid"></div>
+  <div class="more-wrap">
+    <button class="more-btn" id="more-btn">MORE</button>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const articles = [
+    { file: "article001.html", hero: "images/article001-thumb.jpg", work: "『きみの鳥はうたえる』", title: "石橋静河 × 三宅唱監督 インタビュー", date: "2018.08.31" },
+    { file: "article011.html", hero: "images/article011-thumb.jpg", work: "『君が君で君だ』", title: "大倉孝二 × 松居大悟監督 インタビュー", date: "2018.07.06" },
+    { file: "article010.html", hero: "images/article010-thumb.jpg", work: "『四月の永い夢』", title: "朝倉あき × 中川龍太郎監督 インタビュー", date: "2018.05.09" },
+    { file: "article003.html", hero: "images/article003-thumb.jpg", work: "『南瓜とマヨネーズ』", title: "臼田あさ美 × 太賀 × 冨永昌敬監督 インタビュー", date: "2017.11.01" },
+    { file: "article002.html", hero: "images/article002-thumb.jpg", work: "『映画 夜空はいつでも最高密度の青色だ』", title: "石橋静河 × 石井裕也監督 インタビュー", date: "2017.05.05" },
+    { file: "article000.html", hero: "images/article000-thumb.jpg", work: "『退屈な日々にさようならを』", title: "カネコアヤノ × マヒトゥ・ザ・ピーポー（GEZAN）× 今泉力哉監督 インタビュー", date: "2017.02.24" },
+    { file: "article007.html", hero: "images/article007-thumb.jpg", work: "『雨にゆれる女』", title: "青木崇高 × 半野喜弘監督 インタビュー", date: "2016.10.21" },
+    { file: "article006.html", hero: "images/article006-thumb.jpg", work: "『ぼくのおじさん』", title: "松田龍平 × 山下敦弘監督 インタビュー", date: "2016.10.21" },
+    { file: "article005.html", hero: "images/article005-thumb.jpg", work: "『湯を沸かすほどの熱い愛』", title: "杉咲花 × 中野量太監督 インタビュー", date: "2016.10.21" },
+    { file: "article004.html", hero: "images/article004-thumb.jpg", work: "『二重生活』", title: "門脇麦 × 岸善幸監督 インタビュー", date: "2016.06.13" },
+    { file: "article008.html", hero: "images/article008-thumb.jpg", work: "『海のふた』", title: "主演 菊池亜希子 インタビュー", date: "2015.07.19" },
+  ];
+
+  const INITIAL = 8;
+  const grid = document.getElementById('card-grid');
+  const moreBtn = document.getElementById('more-btn');
+  let shown = 0;
+
+  function makeCard(a) {
+    const card = document.createElement('a');
+    card.href = a.file;
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-thumb">
+        <img src="${a.hero}" alt="${a.title}" loading="lazy">
+      </div>
+      <div class="card-body">
+        ${a.work ? `<p class="card-work-title">${a.work}</p>` : ''}
+        <p class="card-title">${a.title}</p>
+        <p class="card-date">${a.date}</p>
+      </div>
+    `;
+    return card;
+  }
+
+  function renderBatch(count) {
+    const end = Math.min(shown + count, articles.length);
+    for (let i = shown; i < end; i++) {
+      grid.appendChild(makeCard(articles[i]));
+    }
+    shown = end;
+    if (shown >= articles.length) moreBtn.disabled = true;
+  }
+
+  renderBatch(INITIAL);
+  moreBtn.addEventListener('click', () => renderBatch(articles.length));
+
+  const btn = document.getElementById('hamburger-btn');
+  const overlay = document.getElementById('hamburger-overlay');
+  const closeBtn = document.getElementById('hamburger-close');
+  btn.addEventListener('click', () => { overlay.classList.add('open'); btn.style.display = 'none'; });
+  closeBtn.addEventListener('click', () => { overlay.classList.remove('open'); btn.style.display = 'flex'; });
+  overlay.addEventListener('click', e => { if (e.target === overlay) { overlay.classList.remove('open'); btn.style.display = 'flex'; } });
+</script>
+
+</body>
+</html>
