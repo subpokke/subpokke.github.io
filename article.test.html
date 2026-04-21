@@ -68,7 +68,7 @@
     .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
     .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
 
-    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #f5c000; border-bottom: 1px solid #555555; background: #fdf8e8; }
+    .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 5px solid #E6FF27; border-bottom: 1px solid #888880; background: #fdf8e8; }
     .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
 
     .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
@@ -86,11 +86,30 @@
     .back-link { display: inline-block; text-align: center; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.25em; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 0.9rem 3rem; transition: all 0.2s; }
     .back-link:hover { background: var(--ink); color: var(--paper); }
 
-    footer { background: var(--header-bg); border-top: 1px solid var(--rule); padding: 2rem; }
-    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .footer-logo { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-decoration: none; }
-    .footer-logo span { font-style: italic; opacity: 0.6; }
-    .footer-copy { font-size: 0.65rem; color: var(--ink-light); letter-spacing: 0.1em; }
+    footer:not(.article-footer) { 
+  background: #888880;
+  border-top: none;
+}
+.footer-inner { 
+  max-width: 900px; 
+  margin: 0 auto; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+.footer-copy { 
+  font-size: 0.65rem; 
+  color: rgba(0,0,0,0.5); 
+  letter-spacing: 0.1em; 
+}
+.footer-bar {
+  height: 30px;
+  background: #E6FF27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
     .ph-icon { opacity: 0.25; }
@@ -881,7 +900,9 @@
 
 <footer>
   <div class="footer-inner">
-    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <img src="images/menu-logo.jpg" alt="SUB POKKE" style="height:36px;width:auto;">
+  </div>
+  <div class="footer-bar">
     <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
   </div>
 </footer>
