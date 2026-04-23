@@ -395,10 +395,33 @@
 
 <footer>
   <div class="footer-inner">
-    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SUB POKKE" style="height:20px;width:auto;opacity:0.7;"></a>
+    <img src="images/menu-logo.jpg" alt="SUB POKKE" style="height:60px;width:auto;">
+  </div>
+  <div class="footer-bar">
     <p class="footer-copy">© SUB POKKE. All rights reserved.</p>
   </div>
 </footer>
+
+
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const overlay = document.getElementById('hamburger-overlay');
+  const closeBtn = document.getElementById('hamburger-close');
+  btn.addEventListener('click', () => {
+    overlay.classList.add('open');
+    btn.style.display = 'none';
+  });
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('open');
+    btn.style.display = 'flex';
+  });
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) {
+      overlay.classList.remove('open');
+      btn.style.display = 'flex';
+    }
+  });
+</script>
 
 </body>
 </html>
