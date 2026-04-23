@@ -8,7 +8,7 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --ink: #1c1a17;
+      --ink: #064362;
       --ink-mid: #4a4640;
       --ink-light: #8a8278;
       --paper: #faf8f4;
@@ -49,25 +49,25 @@
     .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
 
     .article-body { animation: fadeUp 0.7s 0.2s ease both; }
-    .article-body p { font-family: 'Noto Sans JP', sans-serif; font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: #584122; font-weight: 400; }
+    .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 400; }
     .article-intro-wrap { padding: 1.8rem 2rem 0; margin: 0 auto 2.5rem; border: 1px solid #064362; border-radius: 8px; max-width: 750px; }
-.article-intro { font-size: 0.98rem !important; color: #064362 !important; font-weight: 300 !important;}
+.article-intro { font-size: 0.98rem !important; color: #064362 !important; }
     .article-subheading { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.05em; margin: 2.5rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
 
     .qa-block { margin: 2rem 0; }
     .qa-q { margin-bottom: 0.8rem; }
-    .qa-q .qa-text { font-family: 'Noto Sans JP', sans-serif; font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: #584122; }
-.qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
+    .qa-q .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 1.8; color: var(--ink); }
+    .qa-q .qa-text::before { content: "———"; margin-right: 0.3em; letter-spacing: -0.1em; color: var(--ink-light); }
 .qa-a { display: block; margin-bottom: 1.2rem; }
 .qa-label { font-size: 0.95rem; font-weight: 500; color: var(--ink); }
-    .qa-a .qa-text { font-family: 'Noto Sans JP', sans-serif; font-size: 0.95rem; font-weight: 400; line-height: 2.0; color: #584122; }
+    .qa-a .qa-text { font-size: 0.95rem; font-weight: 400; line-height: 2.0; color: var(--ink); }
 
     .inline-image { margin: 3rem auto; width: 100%; max-width: 750px; display: block; }
     .inline-image img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); padding: 3px; box-sizing: border-box; }
     .inline-image .img-placeholder { width: 100%; aspect-ratio: 750/421; background: linear-gradient(135deg, #d8d0c0, #b8b0a0); display: flex; align-items: center; justify-content: center; }
 
     .pull-quote { margin: 3rem 0; padding: 1.5rem 1.8rem; border-left: 8px solid #E6FF27; border-bottom: 1px solid #888880; background: #fdf8e8; }
-    .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: var(--ink) !important; margin-bottom: 0 !important; font-weight: 400; }
+    .pull-quote p { font-family: var(--sans); font-style: normal; font-size: 1.25rem !important; line-height: 1.7 !important; color: #584122 !important; margin-bottom: 0 !important; font-weight: 400; }
 
     .article-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); text-align: center; }
     .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
