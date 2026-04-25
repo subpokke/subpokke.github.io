@@ -238,9 +238,9 @@
 }
 
 .overlay-text {
-  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.82rem;
   line-height: 2.1;
   color: rgba(255,255,255,0.82);
-  font-weight: 400;
+  font-weight: 300;
 }
