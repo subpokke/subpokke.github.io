@@ -161,13 +161,14 @@
     }
 
     .card {
-      text-decoration: none;
-      color: var(--ink);
-      border: 1px solid var(--rule);
-      background: var(--header-bg);
-      display: block;
-      transition: border-color 0.2s;
-    }
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  background: var(--header-bg);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
     .card:hover { border-color: var(--ink-light); }
 
     .card-thumb {
@@ -186,9 +187,10 @@
     .card:hover .card-thumb img { transform: scale(1.04); }
 
     .card-body {
-      padding: 1rem 1.1rem 1.2rem;
-      background: var(--paper);
-    }
+  padding: 1rem 1.1rem 1.2rem;
+  background: var(--paper);
+  flex: 1;
+}
 
     .card-work-title {
       font-family: var(--sans);
@@ -343,18 +345,37 @@
 
 <script>
   const articles = [
-    { file: "article001.html", hero: "images/article001-thumb.jpg", work: "『きみの鳥はうたえる』", title: "石橋静河 × 三宅唱監督 インタビュー", date: "2018.08.31" },
-    { file: "article011.html", hero: "images/article011-thumb.jpg", work: "『君が君で君だ』", title: "大倉孝二 × 松居大悟監督 インタビュー", date: "2018.07.06" },
-    { file: "article010.html", hero: "images/article010-thumb.jpg", work: "『四月の永い夢』", title: "朝倉あき × 中川龍太郎監督 インタビュー", date: "2018.05.09" },
-    { file: "article003.html", hero: "images/article003-thumb.jpg", work: "『南瓜とマヨネーズ』", title: "臼田あさ美 × 太賀 × 冨永昌敬監督 インタビュー", date: "2017.11.01" },
-    { file: "article002.html", hero: "images/article002-thumb.jpg", work: "『映画 夜空はいつでも最高密度の青色だ』", title: "石橋静河 × 石井裕也監督 インタビュー", date: "2017.05.05" },
-    { file: "article000.html", hero: "images/article000-thumb.jpg", work: "『退屈な日々にさようならを』", title: "カネコアヤノ × マヒトゥ・ザ・ピーポー（GEZAN）× 今泉力哉監督 インタビュー", date: "2017.02.24" },
-    { file: "article007.html", hero: "images/article007-thumb.jpg", work: "『雨にゆれる女』", title: "青木崇高 × 半野喜弘監督 インタビュー", date: "2016.10.21" },
-    { file: "article006.html", hero: "images/article006-thumb.jpg", work: "『ぼくのおじさん』", title: "松田龍平 × 山下敦弘監督 インタビュー", date: "2016.10.21" },
-    { file: "article005.html", hero: "images/article005-thumb.jpg", work: "『湯を沸かすほどの熱い愛』", title: "杉咲花 × 中野量太監督 インタビュー", date: "2016.10.21" },
-    { file: "article004.html", hero: "images/article004-thumb.jpg", work: "『二重生活』", title: "門脇麦 × 岸善幸監督 インタビュー", date: "2016.06.13" },
-    { file: "article008.html", hero: "images/article008-thumb.jpg", work: "『海のふた』", title: "菊池亜希子 インタビュー", date: "2015.07.19" },
-  ];
+  { file: "article001.html", hero: "images/article001-thumb.jpg", work: "『きみの鳥はうたえる』", title: "石橋静河 × 三宅唱監督 インタビュー", date: "2018.08.31" },
+  { file: "article011.html", hero: "images/article011-thumb.jpg", work: "『君が君で君だ』", title: "大倉孝二 × 松居大悟監督 インタビュー", date: "2018.07.06" },
+  { file: "article010.html", hero: "images/article010-thumb.jpg", work: "『四月の永い夢』", title: "朝倉あき × 中川龍太郎監督 インタビュー", date: "2018.05.09" },
+  { file: "article003.html", hero: "images/article003-thumb.jpg", work: "『南瓜とマヨネーズ』", title: "臼田あさ美 × 太賀 × 冨永昌敬監督 インタビュー", date: "2017.11.01" },
+  { file: "article009.html", hero: "images/article009-thumb.jpg", work: "『月と雷』", title: "初音映莉子 × 高良健吾 インタビュー", date: "2017.10.06" },
+  { file: "article002.html", hero: "images/article002-thumb.jpg", work: "『映画 夜空はいつでも最高密度の青色だ』", title: "石橋静河 × 石井裕也監督 インタビュー", date: "2017.05.05" },
+  { file: "article000.html", hero: "images/article000-thumb.jpg", work: "『退屈な日々にさようならを』", title: "カネコアヤノ × マヒトゥ・ザ・ピーポー× 今泉力哉監督 インタビュー", date: "2017.02.24" },
+  { file: "article007.html", hero: "images/article007-thumb.jpg", work: "『雨にゆれる女』", title: "青木崇高 × 半野喜弘監督 インタビュー", date: "2016.10.21" },
+  { file: "article006.html", hero: "images/article006-thumb.jpg", work: "『ぼくのおじさん』", title: "松田龍平 × 山下敦弘監督 インタビュー", date: "2016.10.21" },
+  { file: "article005.html", hero: "images/article005-thumb.jpg", work: "『湯を沸かすほどの熱い愛』", title: "杉咲花 × 中野量太監督 インタビュー", date: "2016.10.21" },
+  { file: "article012.html", hero: "images/article012-thumb.jpg", work: "『エミアビのはじまりとはじまり』", title: "森岡龍 × 前野朋哉 インタビュー", date: "2016.08.25" },
+  { file: "article004.html", hero: "images/article004-thumb.jpg", work: "『二重生活』", title: "門脇麦 × 岸善幸監督 インタビュー", date: "2016.06.13" },
+  { file: "article013.html", hero: "images/article013-thumb.jpg", work: "『無伴奏』", title: "成海璃子 × 遠藤新菜 インタビュー", date: "2016.03.25" },
+  { file: "article014.html", hero: "images/article014-thumb.jpg", work: "『友だちのパパが好き』", title: "岸井ゆきの × 安藤輪子 インタビュー", date: "2015.12.19" },
+  { file: "article015.html", hero: "images/article015-thumb.jpg", work: "『アレノ』", title: "山田真歩 × 渋川清彦 インタビュー", date: "2015.11.13" },
+  { file: "article016.html", hero: "images/article016-thumb.jpg", work: "『モーターズ』", title: "木乃江祐希 × 渡辺大知監督 インタビュー", date: "2015.11.13" },
+  { file: "article017.html", hero: "images/article017-thumb.jpg", work: "『ディアーディアー』", title: "中村ゆり × 斉藤陽一郎 × 桐生コウジ インタビュー", date: "2015.10.15" },
+  { file: "article018.html", hero: "images/article018-thumb.jpg", work: "『私たちのハァハァ』", title: "井上苑子 × 真山朔 インタビュー", date: "2015.09.10" },
+  { file: "article019.html", hero: "images/article019-thumb.jpg", work: "『Dressing Up』", title: "祷キララ × 安川有果監督 インタビュー", date: "2015.08.15" },
+  { file: "article008.html", hero: "images/article008-thumb.jpg", work: "『海のふた』", title: "菊池亜希子 インタビュー", date: "2015.07.19" },
+  { file: "article020.html", hero: "images/article020-thumb.jpg", work: "『みちていく』", title: "山田由梨 × 竹内里紗監督 インタビュー", date: "2015.06.27" },
+  { file: "article021.html", hero: "images/article021-thumb.jpg", work: "『ローリング』", title: "柳英里紗 × 冨永昌敬監督 インタビュー", date: "2015.06.10" },
+  { file: "article022.html", hero: "images/article022-thumb.jpg", work: "『グッド・ストライプス』", title: "岨手由貴子監督 インタビュー", date: "2015.06.03" },
+  { file: "article023.html", hero: "images/article023-thumb.jpg", work: "『トイレのピエタ』", title: "野田洋次郎 × 松永大司監督 インタビュー", date: "2015.05.27" },
+  { file: "article024.html", hero: "images/article024-thumb.jpg", work: "贅沢貧乏", title: "山田由梨 インタビュー", date: "2015.05.01" },
+  { file: "article025.html", hero: "images/article025-thumb.jpg", work: "『おんなのこきらい』", title: "森川葵 × 木口健太 × 加藤綾佳監督 インタビュー", date: "2015.02.17" },
+  { file: "article026.html", hero: "images/article026-thumb.jpg", work: "『ワンダフルワールドエンド』", title: "稲葉友 × 松居大悟監督 インタビュー", date: "2015.01.23" },
+  { file: "article027.html", hero: "images/article027-thumb.jpg", work: "チェルフィッチュ", title: "岡田利規 インタビュー", date: "2014.12.23" },
+  { file: "article028.html", hero: "images/article028-thumb.jpg", work: "月刊「根本宗子」", title: "根本宗子 × 梨木智香 × 大竹沙絵子 × あやか インタビュー", date: "2014.12.19" },
+  { file: "article029.html", hero: "images/article029-thumb.jpg", work: "『ワンダフルワールドエンド』", title: "橋本愛 × 松居大悟監督 インタビュー", date: "2014.12.13" },
+];
 
   const INITIAL = 8;
   const grid = document.getElementById('card-grid');
