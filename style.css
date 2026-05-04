@@ -43,10 +43,12 @@
 @media (min-width: 641px) {
   .hero-line-top {
     height: 20px;
+    margin: 0 calc(-50vw + 50%);
     background: linear-gradient(to right, #064362 50%, transparent 50%);
   }
   .hero-line-bottom {
     height: 20px;
+    margin: 0 calc(-50vw + 50%);
     background: linear-gradient(to left, #064362 50%, transparent 50%);
   }
 }
