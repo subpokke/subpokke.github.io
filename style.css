@@ -40,6 +40,18 @@
     .hero-image img { width: 100%; height: auto; display: block; max-width: 780px; }
     .image-caption { font-size: 0.68rem; color: var(--ink-light); letter-spacing: 0.1em; margin-top: 0.7rem; line-height: 1.6; }
 
+@media (min-width: 641px) {
+  .hero-line-top {
+    height: 20px;
+    background: linear-gradient(to right, #064362 50%, transparent 50%);
+  }
+  .hero-line-bottom {
+    height: 20px;
+    background: linear-gradient(to left, #064362 50%, transparent 50%);
+  }
+}
+
+
     .article-body { animation: fadeUp 0.7s 0.2s ease both; }
     .article-body p { font-size: 0.95rem; line-height: 2.0; margin-bottom: 1.8rem; color: var(--ink); font-weight: 400; }
     .article-intro-wrap { padding: 1.8rem 2rem 0; margin: 0 auto 2.5rem; border: 1px solid #064362; border-radius: 8px; max-width: 750px; }
