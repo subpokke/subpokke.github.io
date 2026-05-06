@@ -6,13 +6,24 @@
   <title>石橋静河 × 三宅唱監督 インタビュー — SUB POKKE</title>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+<style>
+@media (min-width: 641px) {
+  .hero-image img {
+    max-width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
+</style>
+
 </head>
 <body>
 
 <header>
   <div class="header-inner">
     <div class="site-logo-wrap">
-    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">ARCHIVES</span>
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="SUB POKKE"></a><span class="site-archives">Archives</span>
 
   </div>
 </header>
@@ -22,8 +33,11 @@
 
   <!-- ヒーロー画像（タイトルの上） -->
   <div class="hero-image">
+  <picture>
+    <source media="(min-width: 641px)" srcset="images/article001-hero-wide.jpg">
     <img src="images/article001-hero.jpg" alt="記事ヘッダー画像">
-  </div>
+  </picture>
+</div>
 
   <!-- 記事タイトル・メタ情報 -->
   <div class="article-header">
