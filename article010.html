@@ -7,6 +7,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
+<style>
+@media (min-width: 641px) {
+  .hero-image img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-image {
+    margin: 0;
+    margin-bottom: -1.5rem;
+    width: 100%;
+  }
+  .hero-image img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -17,56 +40,18 @@
     </div>
   </div>
 </header>
-<button class="hamburger-btn" id="hamburger-btn" aria-label="メニュー">
-  <span></span><span></span><span></span>
-</button>
 
-<div class="hamburger-overlay" id="hamburger-overlay">
-  <button class="hamburger-close" id="hamburger-close">✕ CLOSE</button>
 
-  <!-- ロゴ：左上 -->
-  <img class="overlay-logo" src="images/menu-logo.jpg" alt="SUB POKKE">
 
-  <!-- イラスト：右側、縦いっぱい -->
-  <img class="overlay-illust" src="images/menu-illust.jpg" alt="">
-
-  <!-- テキスト：左側中央 -->
-  <div class="overlay-body">
-    <div class="overlay-section">
-      <p class="overlay-heading">About</p>
-      <p class="overlay-text">
-        <!-- ここを差し替え -->
-        SUB POKKEは、2014年から2019年にかけて<br>存在したインタビュー主体のWebメディアです。<br>当時の記録をここに残します。
-      </p>
-    </div>
-  
-    <div class="overlay-section">
-      <p class="overlay-heading">Founder/Editor</p>
-      <p class="overlay-text">
-        <!-- ここを差し替え -->
-        Tetsuo Kawabata
-      </p>
-    </div>
-  
-    <div class="overlay-section">
-      <p class="overlay-heading">Contact</p>
-     
-        <!-- ここを差し替え -->
-        <img src="images/mail1.png" alt="お問い合わせ" style="height: 1.2em; vertical-align: left;">
-     
-    </div>
-  </div>
+  <!-- ヒーロー画像（タイトルの上） -->
+  <div class="hero-image">
+  <picture>
+    <source media="(min-width: 641px)" srcset="images/article010-hero-wide.jpg">
+    <img src="images/article010-hero.jpg" alt="記事ヘッダー画像">
+  </picture>
 </div>
 
-
-</header>
-
 <article class="article-wrap">
-
-  <!-- ヒーロー画像 -->
-  <div class="hero-image">
-    <img src="images/article010-hero.jpg" alt="記事ヘッダー画像">
-  </div>
 
   <!-- 記事タイトル・メタ情報 -->
   <div class="article-header">
