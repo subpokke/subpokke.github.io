@@ -244,3 +244,30 @@
   color: rgba(255,255,255,0.82);
   font-weight: 300;
 }
+
+.work-info-wrap {
+  position: relative;
+  padding: 1.8rem 2rem;
+  margin: 3rem auto 2.5rem;
+  border: 1px solid #064362;
+  border-radius: 8px;
+  max-width: 750px;
+}
+
+.work-info-label {
+  position: absolute;
+  top: -0.7rem;
+  left: 1.5rem;
+  background: var(--paper);
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  color: #064362;
+  letter-spacing: 0.15em;
+}
+
+.work-info-wrap p {
+  font-size: 0.88rem;
+  line-height: 2.0;
+  color: #064362;
+  margin-bottom: 0.5rem;
+}
