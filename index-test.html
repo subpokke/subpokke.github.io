@@ -218,6 +218,24 @@
       letter-spacing: 0.12em;
     }
 
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-category {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background: #064362;
+  padding: 0.2rem 0.6rem;
+}
+
+
+
     /* ── MORE BUTTON ── */
     .more-wrap { text-align: center; margin-top: 1rem; }
     .more-btn {
@@ -383,21 +401,24 @@
   let shown = 0;
 
   function makeCard(a) {
-    const card = document.createElement('a');
-    card.href = a.file;
-    card.className = 'card';
-    card.innerHTML = `
-      <div class="card-thumb">
-        <img src="${a.hero}" alt="${a.title}" loading="lazy">
+  const card = document.createElement('a');
+  card.href = a.file;
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="card-thumb">
+      <img src="${a.hero}" alt="${a.title}" loading="lazy">
+    </div>
+    <div class="card-body">
+      ${a.work ? `<p class="card-work-title">${a.work}</p>` : ''}
+      <p class="card-title">${a.title}</p>
+      <div class="card-meta">
+        <span class="card-date">${a.date}</span>
+        <span class="card-category">INTERVIEW</span>
       </div>
-      <div class="card-body">
-        ${a.work ? `<p class="card-work-title">${a.work}</p>` : ''}
-        <p class="card-title">${a.title}</p>
-        <p class="card-date">${a.date}</p>
-      </div>
-    `;
-    return card;
-  }
+    </div>
+  `;
+  return card;
+}
 
   function renderBatch(count) {
     const end = Math.min(shown + count, articles.length);
